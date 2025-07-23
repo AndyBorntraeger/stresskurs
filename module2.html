@@ -1,0 +1,111 @@
+# Speichere Modul 2 HTML-Datei mit Platz für Bild in der Mitte
+
+module2_html = """<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modul 2: Mentaltraining</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="hero small">
+    <div class="hero-content">
+      <h1>🧠 Modul 2: Mentaltraining</h1>
+      <nav class="nav">
+        <a href="index.html">🏠 Start</a>
+        <a href="module1.html">🧘 Modul 1</a>
+        <a href="module2.html" class="active">🧠 Modul 2</a>
+        <a href="module3.html">🛠️ Modul 3</a>
+        <a href="module4.html">🍫 Modul 4</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Das Mentaltraining</h2>
+      <p>Ziel des mentalen Stressmanagements ist es, stressverschärfende Denkmuster und Einstellungen achtsam zu erkennen, zu reflektieren und schrittweise in förderliche, stressmindernde Denkweisen zu überführen...</p>
+      <p>Der Begriff „mental“ bezieht sich auf Bewertungen, Gedanken und gedankliche Techniken zur Veränderung dieser Muster. Zentral ist eine achtsame innere Haltung: Gedanken sollen nicht sofort bekämpft, sondern bewusst und bewertungsfrei wahrgenommen werden.</p>
+      <p>Mentales Stressmanagement ist keine naive „Positiv-Denken“-Strategie. Es würdigt tiefliegende Muster und verändert sie achtsam.</p>
+    </section>
+
+    <section>
+      <h2>Vier Ebenen mentaler Prozesse</h2>
+      <ul>
+        <li><strong>Persönliche Sollwerte:</strong> überhöhte Anforderungen flexibilisieren</li>
+        <li><strong>Bewertung von Anforderungen:</strong> alternative Sichtweisen einnehmen</li>
+        <li><strong>Selbsteinschätzung:</strong> Ressourcen stärken</li>
+        <li><strong>Bewertung von Stressreaktionen:</strong> Akzeptanz fördern</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodisches Vorgehen</h2>
+      <p>Das Training kombiniert kognitiv-verhaltenstherapeutische und achtsamkeitsbasierte Ansätze. In fünf Schritten wird die Selbststeuerung im Umgang mit Belastungen gefördert – realistisch, achtsam und mitfühlend.</p>
+    </section>
+
+    <section>
+      <h2>Gedanken und Stress</h2>
+      <p>Gedanken – besonders wenn sie mit der Realität verschmelzen – können Stress verursachen. Beispiel: das Wort „Spinne“ bei Spinnenphobie.</p>
+    </section>
+
+    <section>
+      <h3>Übung: Stressgedanke</h3>
+      <p>Stellen Sie sich eine unangenehme Situation vor und schließen Sie die Augen. Erleben Sie sie mit allen Details.</p>
+      <p><strong>Nachbearbeitung:</strong> Was haben Sie gespürt, gedacht, gefühlt? Was nehmen Sie daraus mit?</p>
+    </section>
+
+    <section>
+      <h2>Denkmuster & Wahrnehmung</h2>
+      <p>Typische stressverstärkende Denkmuster erkennen und verändern.</p>
+    </section>
+
+    <section>
+      <h3>Bild zur Interpretation</h3>
+      <p>Beispiel für unterschiedliche Wahrnehmungsperspektiven (bitte Bild einfügen):</p>
+      <img src="assets/images/optische-taeuschung.jpg" alt="Optische Täuschung – Kelch/Gesichter" style="width:100%; max-width:600px; margin: 1rem 0;">
+      <p>Wie Gedanken sind auch Bilder interpretierbar – je nach innerem Zustand.</p>
+    </section>
+
+    <section>
+      <h3>Übung: Reframing</h3>
+      <p>Welche Gedanken verstärken Ihren Stress? Welche helfen zu entlasten?</p>
+    </section>
+
+    <section>
+      <h2>Gedanken unterbrechen?</h2>
+      <p>Versuche, Gedanken zu unterdrücken (z. B. rosa Elefant), führen oft zum Gegenteil.</p>
+      <h3>Übung: Der rosa Elefant</h3>
+      <p>Denken Sie 30 Sekunden lang nicht an einen rosa Elefanten. Wie oft tauchte das Bild dennoch auf?</p>
+    </section>
+
+    <section>
+      <h2>Was stattdessen? – Defusion</h2>
+      <p>ACT-Techniken helfen, sich von belastenden Gedanken zu distanzieren – ohne sie zu verdrängen.</p>
+    </section>
+
+    <section>
+      <h3>Übung: Defusionstechniken</h3>
+      <ul>
+        <li><strong>Gedanken benennen:</strong> „Ich bemerke, dass ich denke: ...“</li>
+        <li><strong>Gedanken aufschreiben:</strong> alles ohne Bewertung notieren</li>
+        <li><strong>Blätter auf dem Fluss:</strong> Gedanken treiben vorbei</li>
+        <li><strong>Gedankenradio:</strong> Gedanken wie Radiosender wahrnehmen</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Andy Bornträger · kontakt@vorwärtsdenken.de · www.vorwärtsdenken.de</p>
+  </footer>
+</body>
+</html>
+"""
+
+# Speichern
+module2_path = "/mnt/data/stresskurs/module2.html"
+with open(module2_path, "w") as f:
+    f.write(module2_html)
+
+module2_path
