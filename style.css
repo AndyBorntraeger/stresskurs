@@ -1,97 +1,76 @@
-/* Basislayout */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f7f9fc;
+  background: #f7f9fc;
   color: #222;
   line-height: 1.6;
-  padding: 0 1rem;
 }
-
-/* Kopfbereich */
-header {
+header.hero {
+  background: url('assets/images/header.jpg') center/cover no-repeat;
+  color: white;
   text-align: center;
-  padding: 3rem 1rem 2rem;
-  background-color: #e0ecf8;
-  border-bottom: 1px solid #ccc;
+  padding: 4rem 1rem;
 }
-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
+header.hero.small {
+  background-color: #dfeeff;
 }
-header p {
-  font-size: 1rem;
-  color: #555;
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }
-
-/* Hauptinhalt */
+.hero-content p {
+  font-size: 1.2rem;
+}
 main {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-section {
-  margin-bottom: 2.5rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 h2 {
   color: #336699;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
-p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
-
-/* Modulliste */
-.modules {
-  list-style: none;
-  padding: 0;
-}
-.modules li {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: all 0.2s ease;
-}
-.modules li:hover {
-  background-color: #f0f6ff;
-}
-.modules a {
-  color: #2c3e50;
+.module-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #222;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
 }
-
-/* Audio */
+.module-card:hover {
+  background: #eef6ff;
+}
 audio {
   width: 100%;
   margin-top: 1rem;
-  border-radius: 6px;
 }
-
-/* Footer */
+.button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #336699;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
 footer {
   text-align: center;
-  font-size: 0.85rem;
-  padding: 2rem 0 1rem;
-  color: #aaa;
+  font-size: 0.8rem;
+  margin: 3rem 0 2rem;
+  color: #888;
 }
-
-/* Responsives Design */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  .modules li {
-    font-size: 1rem;
-  }
+.back-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #336699;
+  text-decoration: none;
 }
