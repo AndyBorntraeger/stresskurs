@@ -1,113 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modul 2: Mentaltraining</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    .progress-bar {{
-      display: flex;
-      justify-content: space-between;
-      margin: 1rem 0;
-    }}
-    .progress-step {{
-      flex: 1;
-      text-align: center;
-      font-size: 1.2rem;
-    }}
-    .progress-step.completed {{
-      color: green;
-    }}
-    .exercise {{
-      background: #f0f8ff;
-      border-left: 5px solid #0077cc;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 8px;
-    }}
-    .btn-check {{
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #0077cc;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }}
-    .completed-check {{
-      display: inline-block;
-      color: green;
-      font-weight: bold;
-    }}
-  </style>
-  <script>
-    function markCompleted(step) {{
-      document.getElementById('step' + step).classList.add('completed');
-      document.getElementById('check' + step).innerHTML = '✅ Geschafft!';
-    }}
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 2: Mentaltraining</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 960px;
+            margin: auto;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2 {
+            color: #1a73e8;
+        }
+        .progress {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0 2rem;
+        }
+        .progress div {
+            text-align: center;
+            width: 22%;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+        }
+        .progress .active {
+            background-color: #1a73e8;
+            color: white;
+            font-weight: bold;
+        }
+        .motivator {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #d1e7dd;
+            border-left: 5px solid #0f5132;
+        }
+        .img-center {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-  <header class="hero small">
-    <div class="hero-content">
-      <h1>🧠 Modul 2: Mentaltraining</h1>
-      <nav class="nav">
-        <a href="index.html">🏠 Start</a>
-        <a href="module1.html">🧘 Modul 1</a>
-        <a href="module2.html" class="active">🧠 Modul 2</a>
-        <a href="module3.html">🛠️ Modul 3</a>
-        <a href="module4.html">🍫 Modul 4</a>
-      </nav>
+
+    <h1>Modul 2: Das Mentaltraining</h1>
+
+    <div class="progress">
+        <div class="active">🧠 Wahrnehmen</div>
+        <div>🔍 Erkennen</div>
+        <div>🔧 Üben</div>
+        <div>🌱 Verändern</div>
     </div>
-  </header>
 
-  <main>
-    <section class="progress-bar">
-      <div id="step1" class="progress-step">🧐 Wahrnehmung</div>
-      <div id="step2" class="progress-step">💡 Erkenntnis</div>
-      <div id="step3" class="progress-step">🛠️ Übung</div>
-      <div id="step4" class="progress-step">🎯 Umsetzung</div>
-    </section>
+    <div class="motivator">
+        „Jeder Gedanke, den du wahrnimmst, ist ein erster Schritt zur inneren Freiheit.“
+    </div>
 
-    <section>
-      <h2>Was erwartet Sie?</h2>
-      <p>Mentaltraining bedeutet: Denkmuster erkennen – und bewusst beeinflussen. Gemeinsam machen wir Gedanken zu Verbündeten – nicht zu Feinden.</p>
-    </section>
+    <p><strong>Ziel des mentalen Stressmanagements</strong> ist es, stressverschärfende Denkmuster und Einstellungen achtsam zu erkennen, zu reflektieren und schrittweise in förderliche, stressmindernde Denkweisen zu überführen. Dabei lernen Teilnehmende Strategien kennen, mit denen sie herausfordernde Situationen mental besser bewältigen, tolerieren oder präventiv entschärfen können. Der Begriff „mental“ bezieht sich sowohl auf die inneren Bewertungen und Gedanken, die Stress auslösen oder begleiten, als auch auf die gedanklichen Techniken zur Veränderung dieser Muster.</p>
 
-    <section class="exercise">
-      <h3>1. Gedanken & Stress</h3>
-      <p>Stellen Sie sich eine belastende Situation vor und spüren Sie, was dabei gedanklich, emotional und körperlich geschieht.</p>
-      <button class="btn-check" onclick="markCompleted(1)">✓ Übung abgeschlossen</button>
-      <div id="check1" class="completed-check"></div>
-    </section>
+<p>Zentral ist die Entwicklung einer achtsamen inneren Haltung: Gedanken sollen nicht sofort bekämpft, sondern zunächst bewusst und bewertungsfrei wahrgenommen werden. Dies ermöglicht eine Distanz zu belastenden Gedanken und die Entwicklung eines „beobachtenden Ichs“, das nicht automatisch auf jedes Gedankenmuster reagiert. Mentales Stressmanagement unterscheidet sich dabei deutlich vom naiven „positiven Denken“, das oft unrealistische Erwartungen weckt. Stattdessen werden individuelle Einstellungen und „Sollwerte“ als tief verankerte Bewältigungsmuster gewürdigt, die achtsam hinterfragt und verändert werden können.</p>
 
-    <section class="exercise">
-      <h3>2. Denkmuster erkennen</h3>
-      <p>Erkennen Sie typische Denkfallen. Machen Sie sich bewusst, wie unterschiedlich Gedanken interpretiert werden können.</p>
-      <img src="assets/images/optische-taeuschung.jpg" alt="Optische Täuschung – Vase oder Gesichter" style="width:100%; max-width:600px; margin:1rem 0;">
-      <button class="btn-check" onclick="markCompleted(2)">✓ Erkenntnis notiert</button>
-      <div id="check2" class="completed-check"></div>
-    </section>
+<p>Das Training basiert auf dem transaktionalen Stressmodell und setzt an vier zentralen Ebenen mentaler Prozesse an:</p>
+<ul>
+<li><strong>Persönliche Sollwerte:</strong> Stress entsteht oft durch rigide, überhöhte Anforderungen an sich selbst. Ziel ist es, diese zu flexibilisieren.</li>
+<li><strong>Bewertung von Anforderungen:</strong> Stressverstärkende Denkmuster (z. B. Katastrophisieren) sollen durch alternative Sichtweisen ersetzt werden.</li>
+<li><strong>Selbsteinschätzung der Bewältigungskompetenz:</strong> Negative Selbstbilder und Hilflosigkeit sollen durch Fokus auf eigene Stärken und Ressourcen relativiert werden.</li>
+<li><strong>Bewertung akuter Stressreaktionen:</strong> Eine akzeptierende Haltung gegenüber körperlichen und emotionalen Stressreaktionen verhindert deren Verstärkung.</li>
+</ul>
 
-    <section class="exercise">
-      <h3>3. Denkweise verändern</h3>
-      <p>Üben Sie mit einer stressauslösenden Situation verschiedene Sichtweisen. Was hilft Ihnen, innerlich gelassener zu bleiben?</p>
-      <button class="btn-check" onclick="markCompleted(3)">✓ Übung abgeschlossen</button>
-      <div id="check3" class="completed-check"></div>
-    </section>
+<p>Das methodische Vorgehen vereint kognitiv-verhaltenstherapeutische und achtsamkeitsbasierte Ansätze. In fünf aufeinander aufbauenden Schritten lernen die Teilnehmenden, den Zusammenhang zwischen Gedanken und Stress zu verstehen, typische Denkmuster zu erkennen, förderliche Alternativen zu entwickeln, persönliche Stressverstärker zu entschärfen und neue Einstellungen nachhaltig zu verankern. Ziel ist eine verbesserte Selbststeuerung im Umgang mit Belastungen – realistisch, achtsam und mitfühlend sich selbst gegenüber.</p>
 
-    <section class="exercise">
-      <h3>4. Defusionstechniken anwenden</h3>
-      <p>Probieren Sie mindestens eine der vorgestellten Methoden aus, z.B. "Ich bemerke, dass ich gerade denke..."</p>
-      <button class="btn-check" onclick="markCompleted(4)">✓ Technik geübt</button>
-      <div id="check4" class="completed-check"></div>
-    </section>
-  </main>
+<h2>Gedanken und Stress</h2>
+<p>Gedanken bzw. das Verschmelzen von Gedanken mit der Wirklichkeit – also das Wahrnehmen eines Gedankens als wäre dieser Realität oder zumindest als ob dieser mit einer gefühlten Wahrscheinlichkeit eintreten könnte – können Stress verursachen...</p>
 
-  <footer>
-    <p>&copy; 2025 Andy Bornträger · kontakt@vorwärtsdenken.de · www.vorwärtsdenken.de</p>
-  </footer>
+<!-- Der gesamte Rest des Inhalts folgt im nächsten Schritt -->
+
 </body>
 </html>
