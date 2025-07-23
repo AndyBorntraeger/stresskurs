@@ -5,16 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Modul 1: Entspannungstraining</title>
   <link rel="stylesheet" href="style.css"/>
+  <script>
+    // Fortschrittsanzeige aktualisieren
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const checked = [...checkboxes].filter(c => c.checked).length;
+      const total = checkboxes.length;
+      const percent = Math.round((checked / total) * 100);
+      document.getElementById('progress-bar').style.width = percent + '%';
+      document.getElementById('progress-text').textContent = percent + '% abgeschlossen';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+      updateProgress(); // initialer Stand
+    });
+  </script>
 </head>
 <body>
   <header class="hero small">
     <div class="hero-content">
       <h1>🧘 Modul 1: Entspannungstraining</h1>
-      <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
+      <nav class="nav">
+        <a href="index.html">🏠 Start</a>
+        <a href="module1.html" class="active">🧘 Modul 1</a>
+        <a href="module2.html">🧠 Modul 2</a>
+        <a href="module3.html">🛠️ Modul 3</a>
+        <a href="module4.html">🍫 Modul 4</a>
+      </nav>
     </div>
   </header>
 
   <main>
+    <section>
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <p id="progress-text">0% abgeschlossen</p>
+    </section>
+
     <section>
       <h2>Das Entspannungstraining</h2>
       <p>Im Folgenden sind die wichtigsten theoretischen Grundlagen der progressiven Muskelentspannung zusammengefasst. Für einen ausführlichen theoretischen Hintergrund siehe:</p>
@@ -23,39 +53,38 @@
 
     <section>
       <h2>Ziele der progressiven Muskelentspannung</h2>
-      <p>Die progressive Muskelentspannung dient der:</p>
       <ul>
-        <li>Spannungswahrnehmung</li>
-        <li>dem Wechsel von Anspannung und Entspannung</li>
-        <li>dem Genießen der Entspannung</li>
-        <li>der Regulation von Anspannung und Entspannung im Alltag</li>
+        <li><label><input type="checkbox"> Spannungswahrnehmung verstehen</label></li>
+        <li><label><input type="checkbox"> Anspannung und Entspannung spüren</label></li>
+        <li><label><input type="checkbox"> Entspannung genießen lernen</label></li>
+        <li><label><input type="checkbox"> Alltagstransfer reflektieren</label></li>
       </ul>
-      <p>Regelmäßige Übungen führen zu körperlicher und psychischer Regeneration, erhöhter Selbstsicherheit und besserer Stressbewältigung. Darüber hinaus verändert sich auch die innere Haltung – weg von Leistungsdruck und Kontrolle hin zu mehr Achtsamkeit, Selbstfürsorge und Akzeptanz. Entspannung wird so zu einem ganzheitlichen Entwicklungsprozess.</p>
     </section>
 
     <section>
       <h2>Die Methode der progressiven Muskelentspannung</h2>
-      <p>Das Grundprinzip der Methode ist simpel: Es geht um den gezielten Wechsel zwischen Anspannung und Entspannung einzelner Muskelgruppen. Dabei wird jeweils eine Muskelpartie für ein paar Sekunden angespannt, während normal weitergeatmet wird. Mit dem Ausatmen wird die Spannung gelöst, und die Entspannung soll bewusst wahrgenommen und für einen kurzen Zeitraum vertieft werden.</p>
-      <p>Wichtig ist, sich dabei auf das entspannte Körpergefühl zu konzentrieren. Dieser Ablauf kann mehrfach wiederholt werden, bis sich eine spürbare Entspannung in der jeweiligen Muskelgruppe einstellt. So wird eine differenzierte Körperwahrnehmung gefördert und einer allgemeinen Überspannung entgegengewirkt.</p>
+      <p>Gezielter Wechsel zwischen Anspannung und Entspannung einzelner Muskelgruppen. Muskelpartien werden kurz angespannt, dann wird die Spannung gelöst – dabei wird normal weitergeatmet.</p>
+      <label><input type="checkbox"> Ich habe das Prinzip verstanden</label>
     </section>
 
     <section>
       <h2>Praxis der progressiven Muskelentspannung</h2>
-      <p>Grundsätzlich gibt es verschiedene Methoden, um eine Entspannung im Alltag herbeizuführen. Die hier aufgezeigte Methode (progressive Muskelentspannung) stellt neben dem autogenen Training eine der am weitesten verbreiteten Methoden dar.</p>
-      <p>Die progressive Muskelentspannung ist dabei am einfachsten zu verstehen, indem sie ausgeführt wird. Nutzen Sie dafür die bereitgestellten Dateien!</p>
+      <p>Nutzen Sie die bereitgestellten Dateien zur Anwendung:</p>
     </section>
 
     <section>
-      <h2>🎧 Übung anhören</h2>
+      <h3>🎧 Übung anhören</h3>
       <audio controls>
         <source src="assets/audio/entspannung.mp3" type="audio/mpeg">
         Audio nicht verfügbar.
       </audio>
+      <label><input type="checkbox"> Ich habe die Audioübung durchgeführt</label>
     </section>
 
     <section>
-      <h2>📄 Arbeitsblatt</h2>
+      <h3>📄 Arbeitsblatt</h3>
       <a href="assets/pdf/arbeitsblatt1.pdf" target="_blank" class="button">Arbeitsblatt öffnen</a>
+      <label><input type="checkbox"> Ich habe das Arbeitsblatt bearbeitet</label>
     </section>
   </main>
 
