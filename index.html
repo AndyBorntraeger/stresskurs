@@ -1,55 +1,127 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stressbewältigung leicht gemacht</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stressbewältigungsprogramm</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f7f9fb;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #1e88e5;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h1, h2 {
+            color: #1e88e5;
+        }
+        .progress-container {
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        .progress-bar {
+            background: #1e88e5;
+            width: 0%;
+            height: 20px;
+            transition: width 0.3s ease;
+        }
+        .module {
+            border-left: 4px solid #1e88e5;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            background: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Stressbewältigung leicht gemacht</h1>
-      <p>von Andy Bornträger – Psychologischer Psychotherapeut, M. Sc.</p>
-      <nav class="nav">
-        <a href="index.html" class="active">🏠 Start</a>
-        <a href="module1.html">🧘 Modul 1</a>
-        <a href="module2.html">🧠 Modul 2</a>
-        <a href="module3.html">🛠️ Modul 3</a>
-        <a href="module4.html">🍫 Modul 4</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <h1>Trainingsprogramm zur Stressbewältigung</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Einführung</h2>
+            <p>In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen dauerhaft hohen Belastungen ausgesetzt. Umso wichtiger wird der bewusste Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.</p>
+            <p>Das vorliegende Trainingsprogramm zur Stressbewältigung unterstützt dabei, individuelle Stressmuster besser zu erkennen, wirksame Bewältigungsstrategien zu entwickeln und persönliche Ressourcen gezielt zu stärken.</p>
+            <p>Es verbindet fundiertes psychologisches Wissen mit praxisorientierten Übungen und zielt darauf ab, sowohl kurzfristige Entlastung als auch langfristige Veränderungen im Umgang mit Belastungen zu ermöglichen.</p>
+        </section>
 
-  <main>
-    <section>
-      <h2>Einführung</h2>
-      <p>In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen dauerhaft hohen Belastungen ausgesetzt. Umso wichtiger wird der bewusste Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.</p>
-      <p>Dieses Trainingsprogramm hilft dir, individuelle Stressmuster zu erkennen, wirksame Bewältigungsstrategien zu entwickeln und persönliche Ressourcen gezielt zu stärken.</p>
-    </section>
+        <section>
+            <h2>Fortschritt</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </section>
 
-    <section>
-      <h2>Die Module</h2>
-      <div class="module-grid">
-        <a href="module1.html" class="module-card">🧘 Modul 1<br>Entspannungstraining</a>
-        <a href="module2.html" class="module-card">🧠 Modul 2<br>Mentaltraining</a>
-        <a href="module3.html" class="module-card">🛠️ Modul 3<br>Problemlösetraining</a>
-        <a href="module4.html" class="module-card">🍫 Modul 4<br>Genusstraining</a>
-      </div>
-    </section>
+        <section>
+            <h2>Der Aufbau</h2>
+            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können. Das Training befolgt einen logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen.</p>
+            <div class="module">
+                <h3>Modul 1: Entspannungstraining</h3>
+                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung, die Ihnen helfen, Stress unmittelbar abzubauen und präventiv zu begegnen.</p>
+            </div>
+            <div class="module">
+                <h3>Modul 2: Mentaltraining</h3>
+                <p>Dieses Modul stärkt Ihre innere Haltung, trainiert hilfreiche Gedanken und vermittelt Techniken zur mentalen Selbstregulation.</p>
+            </div>
+            <div class="module">
+                <h3>Modul 3: Problemlösetraining</h3>
+                <p>Sie lernen, Probleme strukturiert anzugehen, Handlungsspielräume zu erweitern und Lösungen selbstwirksam umzusetzen.</p>
+            </div>
+            <div class="module">
+                <h3>Modul 4: Genusstraining</h3>
+                <p>Der Fokus liegt auf dem Aufbau positiver Erfahrungen und der bewussten Wahrnehmung von Genussmomenten im Alltag.</p>
+            </div>
+        </section>
 
-    <section>
-      <h2>🎧 Willkommens-Audio</h2>
-      <audio controls>
-        <source src="assets/audio/willkommen.mp3" type="audio/mpeg">
-        Dein Browser unterstützt das Audioformat nicht.
-      </audio>
-    </section>
-  </main>
+        <section>
+            <h2>Das Vorgehen</h2>
+            <p>Zunächst einmal: Stressen Sie sich nicht! Beginnen Sie mit dem ersten Modul und arbeiten Sie sich stetig, Schritt-für-Schritt, vor.</p>
+            <p>Die Praxis zeigt: die Ungeduld und der Wunsch nach Besserung führen dazu, dass die Motivation am Anfang überschwänglich und im Prozess stetig nachlässt.</p>
+            <p>Langfristige Veränderungen werden nicht über Nacht erreicht. Planen Sie daher wöchentliche Termine zur Bearbeitung und täglichen Raum zur Übung ein – z. B. montags um 16 Uhr für die Bearbeitung, nach dem Zähneputzen für die Übung.</p>
+            <p>Wenn Sie Ihre Übungen an Routinen koppeln, bleiben Sie dauerhaft am Ball. So sichern Sie sich stetige und langfristige Erfolge!</p>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Andy Bornträger</p>
-  </footer>
+        <section>
+            <a href="#" class="button" onclick="advanceProgress(25)">Nächstes Modul freischalten</a>
+        </section>
+    </main>
+
+    <script>
+        let progress = 0;
+
+        function advanceProgress(amount) {
+            progress = Math.min(progress + amount, 100);
+            document.getElementById("progressBar").style.width = progress + "%";
+        }
+    </script>
 </body>
 </html>
