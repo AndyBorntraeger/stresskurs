@@ -7,43 +7,77 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: #f7f9fb;
+            background: #f0f4f8;
             margin: 0;
             padding: 0;
             color: #333;
             line-height: 1.6;
         }
         header {
-            background: #1e88e5;
-            color: white;
+            background: linear-gradient(135deg, #1e88e5, #42a5f5);
+            color: #ffffff;
             padding: 2rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 80px;
+            z-index: 9;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #1e88e5;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
             padding: 2rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: white;
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            margin-top: 2rem;
         }
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #1e88e5;
         }
         .progress-container {
             background: #ddd;
             border-radius: 5px;
             overflow: hidden;
+            height: 20px;
             margin: 1rem 0;
+            position: relative;
         }
         .progress-bar {
-            background: #1e88e5;
+            background: #66bb6a;
             width: 0%;
-            height: 20px;
+            height: 100%;
             transition: width 0.3s ease;
+        }
+        .progress-label {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 0;
+            line-height: 20px;
+            font-size: 0.9rem;
+            color: #000;
         }
         .module {
             border-left: 4px solid #1e88e5;
@@ -52,13 +86,21 @@
         }
         .button {
             display: inline-block;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             margin-top: 1rem;
             background: #1e88e5;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
+        }
+        .media-box {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
         }
     </style>
 </head>
@@ -66,8 +108,16 @@
     <header>
         <h1>Trainingsprogramm zur Stressbewältigung</h1>
     </header>
+
+    <nav>
+        <a href="#einleitung">Einführung</a>
+        <a href="#aufbau">Module</a>
+        <a href="#vorgehen">Vorgehen</a>
+        <a href="#materialien">Materialien</a>
+    </nav>
+
     <main>
-        <section>
+        <section id="einleitung">
             <h2>Einführung</h2>
             <p>In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen dauerhaft hohen Belastungen ausgesetzt. Umso wichtiger wird der bewusste Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.</p>
             <p>Das vorliegende Trainingsprogramm zur Stressbewältigung unterstützt dabei, individuelle Stressmuster besser zu erkennen, wirksame Bewältigungsstrategien zu entwickeln und persönliche Ressourcen gezielt zu stärken.</p>
@@ -78,36 +128,50 @@
             <h2>Fortschritt</h2>
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
+                <div class="progress-label" id="progressLabel">0%</div>
             </div>
         </section>
 
-        <section>
+        <section id="aufbau">
             <h2>Der Aufbau</h2>
-            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können. Das Training befolgt einen logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen.</p>
+            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können.</p>
             <div class="module">
                 <h3>Modul 1: Entspannungstraining</h3>
-                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung, die Ihnen helfen, Stress unmittelbar abzubauen und präventiv zu begegnen.</p>
+                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung.</p>
             </div>
             <div class="module">
                 <h3>Modul 2: Mentaltraining</h3>
-                <p>Dieses Modul stärkt Ihre innere Haltung, trainiert hilfreiche Gedanken und vermittelt Techniken zur mentalen Selbstregulation.</p>
+                <p>Dieses Modul stärkt Ihre innere Haltung und vermittelt mentale Techniken.</p>
             </div>
             <div class="module">
                 <h3>Modul 3: Problemlösetraining</h3>
-                <p>Sie lernen, Probleme strukturiert anzugehen, Handlungsspielräume zu erweitern und Lösungen selbstwirksam umzusetzen.</p>
+                <p>Strukturiertes Vorgehen zur Lösung von Problemen im Alltag.</p>
             </div>
             <div class="module">
                 <h3>Modul 4: Genusstraining</h3>
-                <p>Der Fokus liegt auf dem Aufbau positiver Erfahrungen und der bewussten Wahrnehmung von Genussmomenten im Alltag.</p>
+                <p>Fokus auf positive Erfahrungen und Genussmomente im Alltag.</p>
             </div>
         </section>
 
-        <section>
+        <section id="vorgehen">
             <h2>Das Vorgehen</h2>
-            <p>Zunächst einmal: Stressen Sie sich nicht! Beginnen Sie mit dem ersten Modul und arbeiten Sie sich stetig, Schritt-für-Schritt, vor.</p>
-            <p>Die Praxis zeigt: die Ungeduld und der Wunsch nach Besserung führen dazu, dass die Motivation am Anfang überschwänglich und im Prozess stetig nachlässt.</p>
-            <p>Langfristige Veränderungen werden nicht über Nacht erreicht. Planen Sie daher wöchentliche Termine zur Bearbeitung und täglichen Raum zur Übung ein – z. B. montags um 16 Uhr für die Bearbeitung, nach dem Zähneputzen für die Übung.</p>
-            <p>Wenn Sie Ihre Übungen an Routinen koppeln, bleiben Sie dauerhaft am Ball. So sichern Sie sich stetige und langfristige Erfolge!</p>
+            <p>Stressen Sie sich nicht – beginnen Sie mit dem ersten Modul und arbeiten Sie sich Schritt für Schritt vor. Planen Sie feste Termine für die Bearbeitung und für das Üben der Inhalte, z. B. wöchentlich zur selben Uhrzeit.</p>
+            <p>Am besten gelingt das Üben, wenn Sie es in bestehende Routinen integrieren – etwa 10 Minuten nach dem Zähneputzen oder vor dem Schlafengehen.</p>
+        </section>
+
+        <section id="materialien">
+            <h2>Materialien</h2>
+            <div class="media-box">
+                <h3>Geführte Entspannungsübung (Audio)</h3>
+                <audio controls>
+                    <source src="audio/entspannung.mp3" type="audio/mpeg">
+                    Ihr Browser unterstützt das Audioelement nicht.
+                </audio>
+            </div>
+            <div class="media-box">
+                <h3>Arbeitsblatt: Stressmuster erkennen</h3>
+                <a class="button" href="arbeitsblatt_stress.pdf" download>Download PDF</a>
+            </div>
         </section>
 
         <section>
@@ -117,10 +181,10 @@
 
     <script>
         let progress = 0;
-
         function advanceProgress(amount) {
             progress = Math.min(progress + amount, 100);
             document.getElementById("progressBar").style.width = progress + "%";
+            document.getElementById("progressLabel").innerText = progress + "%";
         }
     </script>
 </body>
