@@ -7,35 +7,35 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: #f0f4f8;
+            background: #f7f9fb;
             margin: 0;
             padding: 0;
             color: #333;
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, #1e88e5, #42a5f5);
-            color: #ffffff;
+            background: #1e88e5;
+            color: #fff;
             padding: 2rem;
             text-align: center;
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 1000;
         }
         nav {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem;
+            position: sticky;
+            top: 96px;
+            z-index: 999;
             display: flex;
             justify-content: center;
-            background: #ffffff;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 80px;
-            z-index: 9;
+            gap: 1rem;
         }
         nav a {
-            margin: 0 1rem;
-            text-decoration: none;
             color: #1e88e5;
+            text-decoration: none;
             font-weight: bold;
         }
         nav a:hover {
@@ -43,29 +43,28 @@
         }
         main {
             padding: 2rem;
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
             background: white;
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            margin-top: 2rem;
         }
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #1e88e5;
         }
         .progress-container {
             background: #ddd;
             border-radius: 5px;
             overflow: hidden;
-            height: 20px;
             margin: 1rem 0;
+            height: 20px;
             position: relative;
         }
         .progress-bar {
-            background: #66bb6a;
+            background: #1e88e5;
             width: 0%;
             height: 100%;
             transition: width 0.3s ease;
@@ -86,18 +85,17 @@
         }
         .button {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1rem;
             margin-top: 1rem;
             background: #1e88e5;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
         }
         .media-box {
-            background: #f9f9f9;
-            border: 1px solid #ccc;
+            background: #f1f7ff;
+            border: 1px solid #cce0ff;
             padding: 1rem;
             border-radius: 8px;
             margin-top: 1rem;
@@ -134,29 +132,31 @@
 
         <section id="aufbau">
             <h2>Der Aufbau</h2>
-            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können.</p>
+            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können. Das Training befolgt einen logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen.</p>
             <div class="module">
                 <h3>Modul 1: Entspannungstraining</h3>
-                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung.</p>
+                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung, die Ihnen helfen, Stress unmittelbar abzubauen und präventiv zu begegnen.</p>
             </div>
             <div class="module">
                 <h3>Modul 2: Mentaltraining</h3>
-                <p>Dieses Modul stärkt Ihre innere Haltung und vermittelt mentale Techniken.</p>
+                <p>Dieses Modul stärkt Ihre innere Haltung, trainiert hilfreiche Gedanken und vermittelt Techniken zur mentalen Selbstregulation.</p>
             </div>
             <div class="module">
                 <h3>Modul 3: Problemlösetraining</h3>
-                <p>Strukturiertes Vorgehen zur Lösung von Problemen im Alltag.</p>
+                <p>Sie lernen, Probleme strukturiert anzugehen, Handlungsspielräume zu erweitern und Lösungen selbstwirksam umzusetzen.</p>
             </div>
             <div class="module">
                 <h3>Modul 4: Genusstraining</h3>
-                <p>Fokus auf positive Erfahrungen und Genussmomente im Alltag.</p>
+                <p>Der Fokus liegt auf dem Aufbau positiver Erfahrungen und der bewussten Wahrnehmung von Genussmomenten im Alltag.</p>
             </div>
         </section>
 
         <section id="vorgehen">
             <h2>Das Vorgehen</h2>
-            <p>Stressen Sie sich nicht – beginnen Sie mit dem ersten Modul und arbeiten Sie sich Schritt für Schritt vor. Planen Sie feste Termine für die Bearbeitung und für das Üben der Inhalte, z. B. wöchentlich zur selben Uhrzeit.</p>
-            <p>Am besten gelingt das Üben, wenn Sie es in bestehende Routinen integrieren – etwa 10 Minuten nach dem Zähneputzen oder vor dem Schlafengehen.</p>
+            <p>Zunächst einmal: Stressen Sie sich nicht! Beginnen Sie mit dem ersten Modul und arbeiten Sie sich stetig, Schritt-für-Schritt, vor.</p>
+            <p>Die Praxis zeigt: die Ungeduld und der Wunsch nach Besserung führen dazu, dass die Motivation am Anfang überschwänglich und im Prozess stetig nachlässt.</p>
+            <p>Langfristige Veränderungen werden nicht über Nacht erreicht. Planen Sie daher wöchentliche Termine zur Bearbeitung und täglichen Raum zur Übung ein – z. B. montags um 16 Uhr für die Bearbeitung, nach dem Zähneputzen für die Übung.</p>
+            <p>Wenn Sie Ihre Übungen an Routinen koppeln, bleiben Sie dauerhaft am Ball. So sichern Sie sich stetige und langfristige Erfolge!</p>
         </section>
 
         <section id="materialien">
