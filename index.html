@@ -23,7 +23,7 @@
             top: 0;
             z-index: 1000;
         }
-        nav {
+        nav, .module-nav {
             background: #fff;
             border-bottom: 1px solid #ddd;
             padding: 1rem;
@@ -34,12 +34,12 @@
             justify-content: center;
             gap: 1rem;
         }
-        nav a {
+        nav a, .module-nav a {
             color: #1e88e5;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        nav a:hover, .module-nav a:hover {
             text-decoration: underline;
         }
         main {
@@ -79,10 +79,29 @@
             font-size: 0.9rem;
             color: #000;
         }
-        .module {
-            border-left: 4px solid #1e88e5;
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
+        details {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #1e88e5;
+        }
+        .checkbox-group {
+            margin-top: 1rem;
+        }
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .motivator {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #388e3c;
         }
         .button {
             display: inline-block;
@@ -100,18 +119,6 @@
             padding: 1rem;
             border-radius: 8px;
             margin-top: 1rem;
-        }
-        details {
-            background: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        summary {
-            font-weight: bold;
-            cursor: pointer;
-            color: #1e88e5;
         }
     </style>
 </head>
@@ -143,34 +150,58 @@
             </div>
         </section>
 
+        <div class="module-nav">
+            <a href="#modul1">Modul 1</a>
+            <a href="#modul2">Modul 2</a>
+            <a href="#modul3">Modul 3</a>
+            <a href="#modul4">Modul 4</a>
+        </div>
+
         <section id="aufbau">
             <h2>Der Aufbau</h2>
-            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können. Das Training befolgt einen logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen.</p>
+            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können.</p>
 
-            <details>
+            <details id="modul1">
                 <summary>Modul 1: Entspannungstraining</summary>
-                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung, die Ihnen helfen, Stress unmittelbar abzubauen und präventiv zu begegnen.</p>
+                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung.</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Super gemacht! 🎉')"> Ich habe die Übung ausprobiert</label>
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Toll durchgezogen! ✨')"> Ich habe regelmäßig geübt</label>
+                </div>
+                <div class="motivator" id="motivation1"></div>
             </details>
-            <details>
+            <details id="modul2">
                 <summary>Modul 2: Mentaltraining</summary>
-                <p>Dieses Modul stärkt Ihre innere Haltung, trainiert hilfreiche Gedanken und vermittelt Techniken zur mentalen Selbstregulation.</p>
+                <p>Dieses Modul stärkt Ihre innere Haltung und vermittelt mentale Techniken.</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Klarer Kopf – stark gemacht! 💪')"> Ich habe die Denktechniken geübt</label>
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Du bist mental auf dem Weg! 🚀')"> Ich habe sie im Alltag angewendet</label>
+                </div>
+                <div class="motivator" id="motivation2"></div>
             </details>
-            <details>
+            <details id="modul3">
                 <summary>Modul 3: Problemlösetraining</summary>
-                <p>Sie lernen, Probleme strukturiert anzugehen, Handlungsspielräume zu erweitern und Lösungen selbstwirksam umzusetzen.</p>
+                <p>Strukturiertes Vorgehen zur Lösung von Problemen im Alltag.</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Hindernisse erkannt – super! 🎯')"> Ich habe Probleme identifiziert</label>
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Du findest Wege – weiter so! 🛤️')"> Ich habe Lösungen ausprobiert</label>
+                </div>
+                <div class="motivator" id="motivation3"></div>
             </details>
-            <details>
+            <details id="modul4">
                 <summary>Modul 4: Genusstraining</summary>
-                <p>Der Fokus liegt auf dem Aufbau positiver Erfahrungen und der bewussten Wahrnehmung von Genussmomenten im Alltag.</p>
+                <p>Fokus auf positive Erfahrungen und Genussmomente im Alltag.</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Genuss erkannt – wunderbar! 🌞')"> Ich habe Genussmomente notiert</label>
+                    <label><input type="checkbox" onclick="handleCheck(this, 'Du gönnst dir Gutes – klasse! 💗')"> Ich habe mir bewusst Zeit genommen</label>
+                </div>
+                <div class="motivator" id="motivation4"></div>
             </details>
         </section>
 
         <section id="vorgehen">
             <h2>Das Vorgehen</h2>
-            <p>Zunächst einmal: Stressen Sie sich nicht! Beginnen Sie mit dem ersten Modul und arbeiten Sie sich stetig, Schritt-für-Schritt, vor.</p>
-            <p>Die Praxis zeigt: die Ungeduld und der Wunsch nach Besserung führen dazu, dass die Motivation am Anfang überschwänglich und im Prozess stetig nachlässt.</p>
-            <p>Langfristige Veränderungen werden nicht über Nacht erreicht. Planen Sie daher wöchentliche Termine zur Bearbeitung und täglichen Raum zur Übung ein – z. B. montags um 16 Uhr für die Bearbeitung, nach dem Zähneputzen für die Übung.</p>
-            <p>Wenn Sie Ihre Übungen an Routinen koppeln, bleiben Sie dauerhaft am Ball. So sichern Sie sich stetige und langfristige Erfolge!</p>
+            <p>Stressen Sie sich nicht – beginnen Sie mit dem ersten Modul und arbeiten Sie sich Schritt für Schritt vor. Planen Sie feste Termine für die Bearbeitung und für das Üben der Inhalte.</p>
         </section>
 
         <section id="materialien">
@@ -205,6 +236,15 @@
             progress = Math.min(progress + amount, 100);
             localStorage.setItem("progress", progress);
             updateProgressDisplay();
+        }
+
+        function handleCheck(checkbox, message) {
+            if (checkbox.checked) {
+                advanceProgress(5);
+                const parent = checkbox.closest("details");
+                const id = parent.id.replace("modul", "motivation");
+                document.getElementById(id).innerText = message;
+            }
         }
 
         document.addEventListener("DOMContentLoaded", updateProgressDisplay);
