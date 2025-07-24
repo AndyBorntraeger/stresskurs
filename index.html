@@ -12,6 +12,7 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
         header {
             background: #1e88e5;
@@ -100,6 +101,18 @@
             border-radius: 8px;
             margin-top: 1rem;
         }
+        details {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #1e88e5;
+        }
     </style>
 </head>
 <body>
@@ -133,22 +146,23 @@
         <section id="aufbau">
             <h2>Der Aufbau</h2>
             <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können. Das Training befolgt einen logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen.</p>
-            <div class="module">
-                <h3>Modul 1: Entspannungstraining</h3>
+
+            <details>
+                <summary>Modul 1: Entspannungstraining</summary>
                 <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung, die Ihnen helfen, Stress unmittelbar abzubauen und präventiv zu begegnen.</p>
-            </div>
-            <div class="module">
-                <h3>Modul 2: Mentaltraining</h3>
+            </details>
+            <details>
+                <summary>Modul 2: Mentaltraining</summary>
                 <p>Dieses Modul stärkt Ihre innere Haltung, trainiert hilfreiche Gedanken und vermittelt Techniken zur mentalen Selbstregulation.</p>
-            </div>
-            <div class="module">
-                <h3>Modul 3: Problemlösetraining</h3>
+            </details>
+            <details>
+                <summary>Modul 3: Problemlösetraining</summary>
                 <p>Sie lernen, Probleme strukturiert anzugehen, Handlungsspielräume zu erweitern und Lösungen selbstwirksam umzusetzen.</p>
-            </div>
-            <div class="module">
-                <h3>Modul 4: Genusstraining</h3>
+            </details>
+            <details>
+                <summary>Modul 4: Genusstraining</summary>
                 <p>Der Fokus liegt auf dem Aufbau positiver Erfahrungen und der bewussten Wahrnehmung von Genussmomenten im Alltag.</p>
-            </div>
+            </details>
         </section>
 
         <section id="vorgehen">
@@ -180,12 +194,20 @@
     </main>
 
     <script>
-        let progress = 0;
-        function advanceProgress(amount) {
-            progress = Math.min(progress + amount, 100);
+        let progress = localStorage.getItem("progress") ? parseInt(localStorage.getItem("progress")) : 0;
+
+        function updateProgressDisplay() {
             document.getElementById("progressBar").style.width = progress + "%";
             document.getElementById("progressLabel").innerText = progress + "%";
         }
+
+        function advanceProgress(amount) {
+            progress = Math.min(progress + amount, 100);
+            localStorage.setItem("progress", progress);
+            updateProgressDisplay();
+        }
+
+        document.addEventListener("DOMContentLoaded", updateProgressDisplay);
     </script>
 </body>
 </html>
