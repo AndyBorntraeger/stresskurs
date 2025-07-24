@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modul 1 – Entspannungstraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed p-6 max-w-3xl mx-auto">
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold text-blue-800 mb-2">Modul 1: Entspannungstraining</h1>
+    <p class="text-lg text-gray-600">Einführung in die progressive Muskelentspannung</p>
+  </header>
+
+  <main class="space-y-6">
+
+<section class="bg-white p-6 rounded-xl shadow mb-6">
+  <h2 class="text-2xl font-semibold mb-4 text-blue-700">Modul 1 zum Anhören</h2>
+  <audio controls class="w-full">
+    <source src="../assets/audio/Modul 1 - Das Entspannungstraining.wav" type="audio/wav">
+    Dein Browser unterstützt dieses Audioformat nicht.
+  </audio>
+</section>
+
+    
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Ziele der progressiven Muskelentspannung</h2>
+      <p class="mb-4">
+        Die progressive Muskelentspannung (PMR) verfolgt vier zentrale Ziele, die dir helfen, dein Stresslevel langfristig zu senken und deine Körperwahrnehmung zu stärken:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Spannungswahrnehmung verbessern:</strong> Erkenne körperliche Anspannung frühzeitig und bewusst.</li>
+        <li><strong>Gezielter Wechsel von Anspannung und Entspannung:</strong> Trainiere den natürlichen Rhythmus deines Körpers.</li>
+        <li><strong>Genuss und Bewusstheit für Entspannung:</strong> Lerne, Entspannung als positives Erlebnis wahrzunehmen.</li>
+        <li><strong>Alltagstransfer:</strong> Integriere Entspannungsphasen strategisch in deinen Tagesablauf.</li>
+      </ul>
+    </section>
+
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Die Methode</h2>
+      <p>
+        Das Grundprinzip der Methode ist simpel: Es geht um den gezielten Wechsel zwischen Anspannung und Entspannung einzelner Muskelgruppen.
+        Dabei wird jeweils eine Muskelpartie für ein paar Sekunden angespannt, während normal weitergeatmet wird.
+        Mit dem Ausatmen wird die Spannung gelöst, und die Entspannung soll bewusst wahrgenommen und für einen kurzen Zeitraum vertieft werden.
+      </p>
+      <p class="mt-4">
+        Wichtig ist, sich dabei auf das entspannte Körpergefühl zu konzentrieren. Dieser Ablauf kann mehrfach wiederholt werden,
+        bis sich eine spürbare Entspannung in der jeweiligen Muskelgruppe einstellt.
+        So wird eine differenzierte Körperwahrnehmung gefördert und einer allgemeinen Überspannung entgegengewirkt.
+      </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Praxis</h2>
+      <p>
+        Grundsätzlich gibt es verschiedene Methoden, um eine Entspannung im Alltag herbeizuführen.
+        Die progressive Muskelentspannung stellt neben dem autogenen Training eine der am weitesten verbreiteten Methoden dar.
+      </p>
+      <p class="mt-4">
+        Die Methode ist am einfachsten zu verstehen, indem sie ausgeführt wird. Nutzen Sie dazu die bereitgestellten Dateien!
+      </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Audioanleitung</h2>
+      <audio controls class="w-full">
+        <source src="../assets/audio/entspannung.mp3" type="audio/mpeg">
+        Dein Browser unterstützt kein Audioelement.
+      </audio>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Arbeitsblatt herunterladen</h2>
+      <a href="../assets/pdf/Reflektion - Arbeitsblatt Entspannung.pdf" class="text-blue-600 underline hover:text-blue-800 transition" download>
+        → Arbeitsblatt zu Modul 1 (PDF)
+      </a>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Fortschritt</h2>
+      <label class="flex items-center space-x-3">
+        <input type="checkbox" id="modul1_check" class="h-5 w-5 text-green-500 border-gray-300 rounded" />
+        <span>Ich habe dieses Modul abgeschlossen.</span>
+      </label>
+      <p id="modul1_motivation" class="mt-3 text-green-700 font-semibold hidden">
+        ✅ Stark! Du hast dir wertvolle Entspannungskompetenz angeeignet.
+      </p>
+    </section>
+  
+<section id="modul2_link_section" class="bg-white p-6 rounded-xl shadow hidden">
+  <h2 class="text-2xl font-semibold mb-4 text-blue-700">Modul 2 freigeschaltet</h2>
+  <p class="mb-2">Du kannst nun mit dem nächsten Modul fortfahren:</p>
+  <a href="../module2/module2.html" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+    ➔ Modul 2: Mentaltraining starten
+  </a>
+</section>
+
+
+
+
+</main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checkbox = document.getElementById("modul1_check");
+      const message = document.getElementById("modul1_motivation");
+      const checked = localStorage.getItem("modul1_done") === "true";
+      checkbox.checked = checked;
+      if (checked) message.classList.remove("hidden");
+
+      checkbox.addEventListener("change", () => {
+        localStorage.setItem("modul1_done", checkbox.checked);
+        if (checkbox.checked) {
+        document.getElementById("modul2_link_section").classList.remove("hidden");
+          message.classList.remove("hidden");
+        } else {
+          message.classList.add("hidden");
+        }
+      });
+    });
+  
+    const modul2Link = document.getElementById("modul2_link_section");
+    if (checkbox.checked) {
+        document.getElementById("modul2_link_section").classList.remove("hidden");
+        modul2Link.classList.remove("hidden");
+    } else {
+        modul2Link.classList.add("hidden");
+    }
+    if (checkbox.checked) {
+        document.getElementById("modul2_link_section").classList.remove("hidden");
+        modul2Link.classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
