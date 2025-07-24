@@ -1,1 +1,85 @@
+# Überarbeitete HTML für index.html mit verbessertem Design (Tailwind-like Stil) und vollständigem Inhalt
+index_html_full = """
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Einführung – Stressbewältigungstraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed p-6 max-w-3xl mx-auto">
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold text-blue-800 mb-2">Stressbewältigungstraining</h1>
+    <p class="text-lg text-gray-600">Einführung und Überblick</p>
+  </header>
 
+  <main class="space-y-6">
+    <section class="bg-white p-6 rounded-xl shadow">
+      <p>
+        In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen dauerhaft hohen Belastungen ausgesetzt.
+        Umso wichtiger wird der bewusste Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.
+      </p>
+      <p class="mt-4">
+        Das vorliegende Trainingsprogramm zur Stressbewältigung unterstützt dabei, individuelle Stressmuster besser zu erkennen,
+        wirksame Bewältigungsstrategien zu entwickeln und persönliche Ressourcen gezielt zu stärken.
+        Es verbindet fundiertes psychologisches Wissen mit praxisorientierten Übungen und zielt darauf ab,
+        sowohl kurzfristige Entlastung als auch langfristige Veränderungen im Umgang mit Belastungen zu ermöglichen.
+      </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Der Aufbau</h2>
+      <p>
+        Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können.
+        Das Training folgt einem logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen:
+      </p>
+      <ul class="list-disc list-inside mt-3 space-y-1 text-gray-700">
+        <li>Entspannungstraining</li>
+        <li>Mentaltraining</li>
+        <li>Problemlösetraining</li>
+        <li>Genusstraining</li>
+      </ul>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Das Vorgehen</h2>
+      <p>
+        Zunächst einmal: Stressen Sie sich nicht! Beginnen Sie mit dem ersten Modul und arbeiten sich stetig, Schritt-für-Schritt, vor.
+        Die Praxis zeigt: die Ungeduld und der Wunsch nach Besserung führt (nachvollziehbar) dazu, dass die Motivation am Anfang
+        überschwänglich und im Prozess stetig nachlässt.
+      </p>
+      <p class="mt-4">
+        Konzentrieren Sie sich besser auf eine längere Wegstrecke – der viel zitierte Marathon – nicht auf einen kurzen explosiven Sprint.
+        Langfristige Veränderungen im Stresserleben werden nicht von heute auf morgen erreicht, sondern erfordern eine stetige Übung der Methoden.
+      </p>
+      <p class="mt-4">
+        Auch für uns als Experten gehört ein stetiges Üben in den Alltag.
+        Damit dies gelingt, empfehle ich einen festen Termin pro Woche für dieses Programm.
+        Planen Sie Uhrzeit, Tag und Inhalt Ihrer „Arbeitssitzung“ (z. B. Montag, 03.02.25, 16:00 Uhr, Durcharbeiten Modul 1).
+        Planen Sie auch die Übungseinheiten strategisch ein – am besten direkt an bestehende Routinen andocken (z. B. 10 Minuten Entspannungstraining nach dem Zähneputzen).
+      </p>
+      <p class="mt-4 font-semibold text-green-700">
+        Wenn Sie so vorgehen, sichern Sie sich stetige und langfristige Erfolge!
+        Viel Erfolg und Spaß beim Erlernen hilfreicher Methoden zur Stressbewältigung.
+      </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Audio: Entspannungsübung</h2>
+      <audio controls class="w-full">
+        <source src="../assets/audio/entspannung.mp3" type="audio/mpeg">
+        Dein Browser unterstützt kein Audioelement.
+      </audio>
+    </section>
+
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Arbeitsblatt herunterladen</h2>
+      <a href="../assets/pdf/arbeitsblatt1.pdf" class="text-blue-600 underline hover:text-blue-800 transition" download>
+        → Arbeitsblatt 1 – Selbstbeobachtung starten (PDF)
+      </a>
+    </section>
+  </main>
+</body>
+</html>
+"""
