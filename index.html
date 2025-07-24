@@ -1,253 +1,251 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stressbewältigungsprogramm</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #f7f9fb;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: #1e88e5;
-            color: #fff;
-            padding: 2rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav, .module-nav {
-            background: #fff;
-            border-bottom: 1px solid #ddd;
-            padding: 1rem;
-            position: sticky;
-            top: 96px;
-            z-index: 999;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        nav a, .module-nav a {
-            color: #1e88e5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover, .module-nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h1, h2 {
-            color: #1e88e5;
-        }
-        .progress-container {
-            background: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 1rem 0;
-            height: 20px;
-            position: relative;
-        }
-        .progress-bar {
-            background: #1e88e5;
-            width: 0%;
-            height: 100%;
-            transition: width 0.3s ease;
-        }
-        .progress-label {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            top: 0;
-            line-height: 20px;
-            font-size: 0.9rem;
-            color: #000;
-        }
-        details {
-            background: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        summary {
-            font-weight: bold;
-            cursor: pointer;
-            color: #1e88e5;
-        }
-        .checkbox-group {
-            margin-top: 1rem;
-        }
-        .checkbox-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .motivator {
-            margin-top: 1rem;
-            font-weight: bold;
-            color: #388e3c;
-        }
-        .button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            margin-top: 1rem;
-            background: #1e88e5;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .media-box {
-            background: #f1f7ff;
-            border: 1px solid #cce0ff;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stressbewältigungsprogramm</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f9fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #1e88e5;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fixed-module-nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.75rem 1rem;
+      z-index: 999;
+    }
+    .fixed-module-nav a {
+      color: #1e88e5;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .fixed-module-nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 120px auto 2rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h1, h2 {
+      color: #1e88e5;
+    }
+    .progress-container {
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 1rem 0;
+      height: 20px;
+      position: relative;
+    }
+    .progress-bar {
+      background: #1e88e5;
+      width: 0%;
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+    .progress-label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 0;
+      line-height: 20px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+    details {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #1e88e5;
+    }
+    .checkbox-group {
+      margin-top: 1rem;
+    }
+    .checkbox-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .motivator {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #388e3c;
+    }
+    .quote-box {
+      margin-top: 1rem;
+      background: #e3f2fd;
+      padding: 0.75rem;
+      border-left: 4px solid #1e88e5;
+      font-style: italic;
+      border-radius: 5px;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      background: #1e88e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .media-box {
+      background: #f1f7ff;
+      border: 1px solid #cce0ff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Trainingsprogramm zur Stressbewältigung</h1>
-    </header>
+  <header>
+    <h1>Trainingsprogramm zur Stressbewältigung</h1>
+  </header>
 
-    <nav>
-        <a href="#einleitung">Einführung</a>
-        <a href="#aufbau">Module</a>
-        <a href="#vorgehen">Vorgehen</a>
-        <a href="#materialien">Materialien</a>
-    </nav>
+  <div class="fixed-module-nav">
+    <a href="#einleitung">Start</a>
+    <a href="#modul1">Modul 1</a>
+    <a href="#modul2">Modul 2</a>
+    <a href="#modul3">Modul 3</a>
+    <a href="#modul4">Modul 4</a>
+  </div>
 
-    <main>
-        <section id="einleitung">
-            <h2>Einführung</h2>
-            <p>In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen dauerhaft hohen Belastungen ausgesetzt. Umso wichtiger wird der bewusste Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.</p>
-            <p>Das vorliegende Trainingsprogramm zur Stressbewältigung unterstützt dabei, individuelle Stressmuster besser zu erkennen, wirksame Bewältigungsstrategien zu entwickeln und persönliche Ressourcen gezielt zu stärken.</p>
-            <p>Es verbindet fundiertes psychologisches Wissen mit praxisorientierten Übungen und zielt darauf ab, sowohl kurzfristige Entlastung als auch langfristige Veränderungen im Umgang mit Belastungen zu ermöglichen.</p>
-        </section>
-
-        <section>
-            <h2>Fortschritt</h2>
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
-                <div class="progress-label" id="progressLabel">0%</div>
-            </div>
-        </section>
-
-        <div class="module-nav">
-            <a href="#modul1">Modul 1</a>
-            <a href="#modul2">Modul 2</a>
-            <a href="#modul3">Modul 3</a>
-            <a href="#modul4">Modul 4</a>
+  <main>
+    <section id="einleitung">
+      <h2>Einführung</h2>
+      <p>In einer zunehmend schnelllebigen und anspruchsvollen Welt ...</p>
+    </section>
+    <section>
+      <h2>Fortschritt</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <div class="progress-label" id="progressLabel">0%</div>
+      </div>
+    </section>
+    <section id="aufbau">
+      <h2>Der Aufbau</h2>
+      <details id="modul1">
+        <summary>Modul 1: Entspannungstraining</summary>
+        <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung.</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation1')"> Ich habe die Übung ausprobiert</label>
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation1')"> Ich habe regelmäßig geübt</label>
         </div>
+        <div class="motivator" id="motivation1"></div>
+      </details>
+      <details id="modul2">
+        <summary>Modul 2: Mentaltraining</summary>
+        <p>Dieses Modul stärkt Ihre innere Haltung ...</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation2')"> Ich habe die Denktechniken geübt</label>
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation2')"> Ich habe sie im Alltag angewendet</label>
+        </div>
+        <div class="motivator" id="motivation2"></div>
+      </details>
+      <details id="modul3">
+        <summary>Modul 3: Problemlösetraining</summary>
+        <p>Strukturiertes Vorgehen zur Lösung von Problemen im Alltag.</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation3')"> Ich habe Probleme identifiziert</label>
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation3')"> Ich habe Lösungen ausprobiert</label>
+        </div>
+        <div class="motivator" id="motivation3"></div>
+      </details>
+      <details id="modul4">
+        <summary>Modul 4: Genusstraining</summary>
+        <p>Fokus auf positive Erfahrungen und Genussmomente im Alltag.</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation4')"> Ich habe Genussmomente notiert</label>
+          <label><input type="checkbox" onclick="handleCheck(this, 'motivation4')"> Ich habe mir bewusst Zeit genommen</label>
+        </div>
+        <div class="motivator" id="motivation4"></div>
+      </details>
+    </section>
+    <section id="materialien">
+      <h2>Materialien</h2>
+      <div class="media-box">
+        <h3>Geführte Entspannungsübung (Audio)</h3>
+        <audio controls>
+          <source src="audio/entspannung.mp3" type="audio/mpeg" />
+          Ihr Browser unterstützt das Audioelement nicht.
+        </audio>
+      </div>
+      <div class="media-box">
+        <h3>Arbeitsblatt: Stressmuster erkennen</h3>
+        <a class="button" href="arbeitsblatt_stress.pdf" download>Download PDF</a>
+      </div>
+    </section>
+    <section>
+      <a href="#" class="button" onclick="advanceProgress(25)">Nächstes Modul freischalten</a>
+    </section>
+  </main>
+  <script>
+    let progress = localStorage.getItem("progress") ? parseInt(localStorage.getItem("progress")) : 0;
+    const quotes = [
+      "Der erste Schritt zur Veränderung ist Bewusstsein.",
+      "Kleine Schritte führen zu großen Veränderungen.",
+      "Du bist stärker, als du denkst.",
+      "Jede Übung ist ein Geschenk an dich selbst.",
+      "Selbstfürsorge ist kein Luxus, sondern eine Notwendigkeit."
+    ];
 
-        <section id="aufbau">
-            <h2>Der Aufbau</h2>
-            <p>Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können.</p>
+    function updateProgressDisplay() {
+      document.getElementById("progressBar").style.width = progress + "%";
+      document.getElementById("progressLabel").innerText = progress + "%";
+    }
 
-            <details id="modul1">
-                <summary>Modul 1: Entspannungstraining</summary>
-                <p>Hier lernen Sie Methoden zur körperlichen und mentalen Entspannung.</p>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Super gemacht! 🎉')"> Ich habe die Übung ausprobiert</label>
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Toll durchgezogen! ✨')"> Ich habe regelmäßig geübt</label>
-                </div>
-                <div class="motivator" id="motivation1"></div>
-            </details>
-            <details id="modul2">
-                <summary>Modul 2: Mentaltraining</summary>
-                <p>Dieses Modul stärkt Ihre innere Haltung und vermittelt mentale Techniken.</p>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Klarer Kopf – stark gemacht! 💪')"> Ich habe die Denktechniken geübt</label>
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Du bist mental auf dem Weg! 🚀')"> Ich habe sie im Alltag angewendet</label>
-                </div>
-                <div class="motivator" id="motivation2"></div>
-            </details>
-            <details id="modul3">
-                <summary>Modul 3: Problemlösetraining</summary>
-                <p>Strukturiertes Vorgehen zur Lösung von Problemen im Alltag.</p>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Hindernisse erkannt – super! 🎯')"> Ich habe Probleme identifiziert</label>
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Du findest Wege – weiter so! 🛤️')"> Ich habe Lösungen ausprobiert</label>
-                </div>
-                <div class="motivator" id="motivation3"></div>
-            </details>
-            <details id="modul4">
-                <summary>Modul 4: Genusstraining</summary>
-                <p>Fokus auf positive Erfahrungen und Genussmomente im Alltag.</p>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Genuss erkannt – wunderbar! 🌞')"> Ich habe Genussmomente notiert</label>
-                    <label><input type="checkbox" onclick="handleCheck(this, 'Du gönnst dir Gutes – klasse! 💗')"> Ich habe mir bewusst Zeit genommen</label>
-                </div>
-                <div class="motivator" id="motivation4"></div>
-            </details>
-        </section>
+    function advanceProgress(amount) {
+      progress = Math.min(progress + amount, 100);
+      localStorage.setItem("progress", progress);
+      updateProgressDisplay();
+    }
 
-        <section id="vorgehen">
-            <h2>Das Vorgehen</h2>
-            <p>Stressen Sie sich nicht – beginnen Sie mit dem ersten Modul und arbeiten Sie sich Schritt für Schritt vor. Planen Sie feste Termine für die Bearbeitung und für das Üben der Inhalte.</p>
-        </section>
+    function handleCheck(checkbox, motivatorId) {
+      if (checkbox.checked) {
+        advanceProgress(5);
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById(motivatorId).innerHTML = `<div class='quote-box'>\"${quote}\"</div>`;
+      }
+    }
 
-        <section id="materialien">
-            <h2>Materialien</h2>
-            <div class="media-box">
-                <h3>Geführte Entspannungsübung (Audio)</h3>
-                <audio controls>
-                    <source src="audio/entspannung.mp3" type="audio/mpeg">
-                    Ihr Browser unterstützt das Audioelement nicht.
-                </audio>
-            </div>
-            <div class="media-box">
-                <h3>Arbeitsblatt: Stressmuster erkennen</h3>
-                <a class="button" href="arbeitsblatt_stress.pdf" download>Download PDF</a>
-            </div>
-        </section>
-
-        <section>
-            <a href="#" class="button" onclick="advanceProgress(25)">Nächstes Modul freischalten</a>
-        </section>
-    </main>
-
-    <script>
-        let progress = localStorage.getItem("progress") ? parseInt(localStorage.getItem("progress")) : 0;
-
-        function updateProgressDisplay() {
-            document.getElementById("progressBar").style.width = progress + "%";
-            document.getElementById("progressLabel").innerText = progress + "%";
-        }
-
-        function advanceProgress(amount) {
-            progress = Math.min(progress + amount, 100);
-            localStorage.setItem("progress", progress);
-            updateProgressDisplay();
-        }
-
-        function handleCheck(checkbox, message) {
-            if (checkbox.checked) {
-                advanceProgress(5);
-                const parent = checkbox.closest("details");
-                const id = parent.id.replace("modul", "motivation");
-                document.getElementById(id).innerText = message;
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", updateProgressDisplay);
-    </script>
+    document.addEventListener("DOMContentLoaded", updateProgressDisplay);
+  </script>
 </body>
 </html>
