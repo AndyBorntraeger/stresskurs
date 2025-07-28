@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("modul3_done");
+    const linkSection = document.getElementById("modul4_link_section");
+    const saved = localStorage.getItem("modul3_done") === "true";
+    checkbox.checked = saved;
+    if (saved) {
+      linkSection.classList.remove("hidden");
+    }
+    checkbox.addEventListener("change", () => {
+      localStorage.setItem("modul3_done", checkbox.checked);
+      if (checkbox.checked) {
+        linkSection.classList.remove("hidden");
+      } else {
+        linkSection.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modul 3 – Das Problemlösetraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach((cb) => {
+        const saved = localStorage.getItem(cb.id);
+        if (saved) cb.checked = true;
+        cb.addEventListener('change', () => {
+          localStorage.setItem(cb.id, cb.checked);
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+  <h1 class="text-3xl font-bold text-blue-700 mb-4">Modul 3: Das Problemlösetraining</h1>
+
+  <!-- Audio oben -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Modul 3 zum Anhören</h2>
+    <audio controls class="w-full">
+      <source src="../assets/audio/modul3_intro.wav" type="audio/wav" />
+      Dein Browser unterstützt kein Audioelement.
+    </audio>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 1</h2>
+    <p class="mb-4 whitespace-pre-line">Das Modul zielt auf die aktive Auseinandersetzung mit individuellen Belastungen ab. Dabei werden: 1. Konkrete Bewältigungsstrategien für persönliche Belastungen entwickelt – exemplarisch und lösungsorientiert. 
+2. Problemlösekompetenzen langfristig gestärkt – Defizite im Problemlöseprozess sollen ausgeglichen und systematisches Vorgehen eingeübt werden. 
+3. Eine problemlösende Grundhaltung vermittelt, bestehend aus: Akzeptanz von Problemen als Teil des Lebens, Vertrauen in die eigene Bewältigungsfähigkeit, Bereitschaft zur aktiven Annahme der Situation, Kontrolle über impulsives Verhalten. 
+Ziel ist ein Perspektivwechsel: von Hilflosigkeit zur Selbstwirksamkeit, von starren Denkmustern zu kreativer Lösungsfindung. Wir nutzen dabei folgenden Leitfaden um Probleme im Alltag besser bewältigen zu können: 
+1. Stress erkennen und verstehen - Die Teilnehmenden beobachten systematisch ihre Stresssituationen und benennen konkret, was genau passiert – weg von allgemeinen Aussagen hin zu konkretem Verhalten in bestimmten Situationen.
+2. Ideen sammeln Gemeinsam mit der Gruppe werden viele verschiedene Lösungsmöglichkeiten kreativ und ohne Bewertung gesammelt – es geht darum, den Blick zu weiten. Die passende Lösung auswählen Aus den gesammelten Ideen wählt die betroffene Person eine oder mehrere aus, die für sie am sinnvollsten erscheinen – je nach den zu erwartenden Folgen. 
+4. Handlungsschritte planen Die ausgewählte Lösung wird in konkrete, machbare Schritte übersetzt. Rollenspiele oder innere Vorstellungsübungen helfen dabei, sich gut vorzubereiten. 
+5. Im Alltag umsetzen Jetzt wird die geplante Lösung im realen Leben ausprobiert – dieser Schritt passiert außerhalb des Trainings. 
+6. Rückblick und Auswertung Abschließend wird reflektiert: Was hat funktioniert? Was nicht? Und warum? Daraus lassen sich wichtige Erkenntnisse für zukünftige Situationen ableiten.
+7. Stress erkennen und verstehen Der erste Schritt zur problemorientierten Bewältigung von Belastungen besteht darin, belastende Situationen möglichst präzise zu beschreiben. 
+8. Diffuse und schwer greifbare Stressgefühle sollen so konkreten Auslösern zugeordnet werden. Dieses genaue Verständnis der Situation und der eigenen Reaktionen hilft dabei, Belastungen frühzeitig zu erkennen (Sensibilisierung) und gezielt darauf reagieren zu können. 
+
+Übung dazu: Greifen Sie eine belastende Situation aus Ihrem Alltag heraus und analysieren Sie nach den folgenden Leitfragen: Wann trat die Situation auf? Wer war an der Situation beteiligt? Wo trat die Situation auf? Um welche Themen ging es? Wer hat in welcher Art und Weise reagiert? Analysieren Sie anschließend das Verhalten der beteiligten Personen. Bewerten Sie Ihr eigenes Verhalten und das der Anderen. Versuchen Sie einen Perspektivwechsel, um auch andere Personen besser verstehen zu können. Fragen Sie sich, wieso die andere Person so gehandelt haben könnte. Anschließend formulieren Sie Ihre eigenen Erwartungen und Wünsche an sich selbst in der Situation oder an andere Beteiligte. Formulieren Sie auch Ihre Befürchtungen oder Ängste. Abschließend beobachten Sie noch Ihre eigene Reaktion während der Analyse und in der Situation selbst. Welche Gefühle spüre ich? Welche Gedanken habe ich? Welche Körperreaktionen zeigen sich?</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Welche belastenden Situationen kommen bei dir immer wieder vor?</li><li>Wie beschreibst du dein Verhalten in diesen Situationen?</li><li>Wie fühlst du dich, wenn du die Situation aus einer anderen Perspektive betrachtest?</li><li>Welche Erwartungen hast du an dich und andere in belastenden Situationen?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 2</h2>
+    <p class="mb-4 whitespace-pre-line">Übung: Schreiben Sie einfach Ihre potenziellen Lösungen für die Situation auf. Versuchen Sie möglichst viele Ideen zu generieren, Fragen Sie Freunde oder Bekannte nach Lösungsvorschlägen oder benutzen Sie eine künstliche Intelligenz (KI) um weitere Lösungsvorschläge zu generieren. Die passende Lösung auswählen. Im dritten Schritt wählen Sie aus der gesammelten Ideensammlung die Vorschläge aus, von denen Sie sich am meisten Stressreduktion versprechen. Zunächst entscheiden Sie sich spontan für Ideen, die Sie ansprechen, danach werden auch alle anderen Vorschläge systematisch durchgegangen. Die Auswahl orientiert sich an der erwarteten Wirkung auf den Stress, nicht sofort an der Umsetzbarkeit – denn Zweifel an der eigenen Fähigkeit zur Umsetzung können Teil des Problems sein. Wichtig ist eine positive Auswahl: Nur gute Ideen werden markiert, keine Vorschläge werden gestrichen, damit sie später noch berücksichtigt werden können. So bleibt der Raum für neue Bewertungen offen. Berücksichtigen Sie dabei insbesondere die Folgen der Verhaltensalternativen - sowohl positive als auch negative - für sich und Ihre Umwelt. Gehen Sie mit System vor und schreiben Sie für die besten Ideen die Vor- und Nachteile der jeweiligen Strategie auf. Falls keine ideale Lösung dabei ist, können Kombinationen oder Ranglisten helfen. Oft entstehen in diesem Prozess auch ganz neue Ideen.</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Wie findest du neue Lösungsansätze für deine Probleme?</li><li>Wer oder was kann dir dabei helfen, neue Ideen zu entwickeln?</li><li>Welche Kriterien nutzt du, um eine Lösung auszuwählen?</li><li>Wie gehst du mit Zweifeln bezüglich der Umsetzung um?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 3</h2>
+    <p class="mb-4 whitespace-pre-line">Übung: Schreiben Sie die Folgen Ihrer unterschiedlichen Handlungsstrategien auf. Unterteilen Sie dabei in “wünschenswerte” und “nicht so wünschenswerte” Folgen des Handelns. Sozusagen der Nutzen und die Kosten des Verhaltens. Versuchen Sie dabei stets Ihre eigene Perspektive zu nutzen, aber auch die von Anderen. Verschaffen Sie sich am Ende der Übung noch einmal einen Überblick über alle möglichen Strategien und Ihre Auswahl - vergessen Sie nicht die kreativen Lösungsansätze, die manchmal auf den ersten Blick seltsam wirken können. Erstellen Sie anschließend eine Rangliste bzw. eine Kombinationsliste aus den unterschiedlichen Strategien. Handlungsschritte planen Nachdem Sie sich nun für eine oder mehrere Bewältigungsideen entschieden haben, geht es nun darum, ganz konkrete Handlungsschritte für die Umsetzung zu planen. Legen Sie genau fest, was sie wann, wo und in welcher Reihenfolge tun wollen. Dabei werden auch mögliche Hindernisse mitgedacht – und wie man ihnen begegnen kann. Der Plan soll realistisch und umsetzbar sein, damit der nächste Schritt klein und machbar bleibt. Verpflichten Sie sich selbst zur Handlungsumsetzung. Das hilft besonders denjenigen, die sich mit Veränderungen noch schwertun.</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Wie kannst du Vor- und Nachteile deiner Handlungsoptionen abwägen?</li><li>Wie wichtig ist es für dich, eine klare Handlungsschritte zu planen?</li><li>Welche Hindernisse erwartest du bei der Umsetzung und wie kannst du sie überwinden?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 4</h2>
+    <p class="mb-4 whitespace-pre-line">Übung: Gehen Sie auch hier systematisch vor. Nehmen Sie sich die erste Handlungsstrategie für die Sie sich entschieden haben. Gehen Sie nun Schritt-für-Schritt in Gedanken durch, welche Handlungsschritte aufeinander folgen müssten, damit Sie Ihre Strategie umsetzen können. Schreiben Sie diese Handlungsschritte in einer Listenform auf und nummerieren Sie diese (1. → 2. usw.). Versuchen Sie sich möglichst gut in die Situation hineinzuversetzen, schließen Sie wenn nötig Ihre Augen damit Sie sich gut konzentrieren können. Versuchen Sie dabei möglichst konkret zu bleiben: Also statt “2. Schritt: Nachfragen” ergänzen Sie noch eine entsprechende Formulierung, die zu Ihnen passt (z.B. “Könnten Sie mir bitte eine Empfehlung für ein Restaurant geben?”). Je konkreter Sie jetzt vorgehen, umso leichter wird Ihnen der nächste Schritt fallen. Im Alltag umsetzen In diesem Schritt geht es darum, die zuvor geplanten Maßnahmen im Alltag tatsächlich umzusetzen – das Herzstück des gesamten Problemlöseprozesses. Wenn die Umsetzung gelingt und die Belastung spürbar abnimmt, ist das Ziel erreicht. Wenn nicht, liefert das praktische Handeln wertvolle Hinweise, um das Problem besser zu verstehen und neue Lösungswege zu entwickeln. Erst im konkreten Alltag zeigt sich oft, was wirklich funktioniert und wo noch Schwierigkeiten liegen. Deshalb ist es sinnvoll, möglichst früh mit kleinen Handlungsschritten zu beginnen – auch wenn das Problem noch nicht ganz durchdrungen scheint. Da dieser Schritt im realen Leben stattfindet, ist Selbstbeobachtung besonders wichtig. In manchen Fällen kann auch eine Freundin oder ein Freund als unterstützender Beobachter helfen. Die gesammelten Erfahrungen bilden dann die Basis für den abschließenden sechsten Schritt.</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Wie kannst du deine Handlungsschritte konkret planen?</li><li>Wie kannst du dich gut auf schwierige Situationen vorbereiten?</li><li>Wer kann dich bei der Umsetzung im Alltag unterstützen?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 5</h2>
+    <p class="mb-4 whitespace-pre-line">Übung: Um eine möglichst hohe Wahrscheinlichkeit zu einer realen Umsetzung des geplanten Verhaltens zu erreichen, können Sie sich einiger psychologischer Tricks bedienen. Beispielsweise können Sie sich einer Freundin mitteilen und von ihren Plänen berichten. Oder Sie belohnen sich für Ihren Mut und das Umsetzen eines schwierigen Schrittes und gehen anschließend etwas Essen, laden Ihren Partner oder Partnerin ein oder genießen einen sehenswerten Film. Dabei ist es besonders wichtig, dass Sie für sich selbst einen Anreiz schaffen, es auch wirklich umzusetzen - dabei ist es egal, was für Sie der Anreiz ist. Für den einen ist es ein Stück Kuchen essen, für die Andere ist es eine Freundin zu besuchen. Nutzen Sie die Kraft der Belohnung für sich!</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Welche Belohnungen motivieren dich besonders?</li><li>Wie kannst du dich selbst für kleine Erfolge anerkennen?</li><li>Wie unterstützt du dich bei der Umsetzung schwieriger Schritte?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 6</h2>
+    <p class="mb-4 whitespace-pre-line">Rückblick und Auswertung
+Im Zentrum dieses Schrittes steht die Rückschau auf die Umsetzung: Was hat geklappt, was nicht – und warum? Dabei ist wichtig, genügend Zeit für die Reflexion einzuplanen. Auch wenn die Handlung objektiv erfolgreich war, kann es sein, dass Sie trotzdem unzufrieden sein können – etwa, weil Sie unbewusst andere Ziele hatten oder sich an überhöhten Maßstäben messen. Ziel dieses Schritts ist es, aus dem Verlauf zu lernen.
+Übung: Nutzen Sie folgenden Leitfaden, um Ihre Umsetzung zu analysieren: Was war hilfreich? Wo im Problemlöseprozess gab es vielleicht Fehler oder Hürden? War das Problem klar genug beschrieben? War die Lösung passend? War der Handlungsplan konkret und machbar? Auch bei erfolgreicher Bewältigung ist es wichtig, zu verstehen, warum es geklappt hat und wie Sie die Methode künftig selbstständig anwenden können. Dabei geht es um eine Verinnerlichung der einzelnen Lösungsschritte und deren Aufarbeitung. Lassen Sie sich also diese Chance nicht entgehen!</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Was hat bei dir bei der Umsetzung gut funktioniert?</li><li>Wo gab es Schwierigkeiten oder Hindernisse?</li><li>Wie kannst du das Gelernte in Zukunft besser anwenden?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-xl font-semibold mb-2">Fortschritt</h2>
+    <label class="inline-flex items-center mt-2">
+      <input type="checkbox" id="modul3_done" class="form-checkbox h-5 w-5 text-blue-600" /><span class="ml-2">Modul 3 abgeschlossen</span>
+    </label>
+  </section>
+
+<div id="modul4_link_section" class="hidden text-right">
+ <a href="../module4/module4.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Weiter zu Modul 4</a>
+</div>
+
+
+
+
+</body>
+</html>
