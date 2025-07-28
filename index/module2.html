@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modul 2 – Mentaltraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checkbox = document.getElementById("modul2_done");
+      const linkSection = document.getElementById("modul3_link_section");
+      const saved = localStorage.getItem("modul2_done") === "true";
+      checkbox.checked = saved;
+      if (saved) {
+        linkSection.classList.remove("hidden");
+      }
+      checkbox.addEventListener("change", () => {
+        localStorage.setItem("modul2_done", checkbox.checked);
+        if (checkbox.checked) {
+          linkSection.classList.remove("hidden");
+        } else {
+          linkSection.classList.add("hidden");
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+  <h1 class="text-3xl font-bold text-blue-700 mb-4">Modul 2: Mentaltraining</h1>
+
+  
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Modul 2 zum Anhören</h2>
+    <audio controls class="w-full">
+      <source src="../assets/audio/modul2_intro.wav" type="audio/wav">
+      Dein Browser unterstützt kein Audioelement.
+    </audio>
+  </section>
+
+  
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 1</h2>
+      <p class="mb-4 whitespace-pre-line">Ziel des mentalen Stressmanagements ist es, stressverschärfende Denkmuster und Einstellungen achtsam zu erkennen, zu reflektieren und schrittweise in förderliche, stressmindernde Denkweisen zu überführen. Dabei lernen Teilnehmende Strategien kennen, mit denen sie herausfordernde Situationen mental besser bewältigen, tolerieren oder präventiv entschärfen können. Der Begriff „mental“ bezieht sich sowohl auf die inneren Bewertungen und Gedanken, die Stress auslösen oder begleiten, als auch auf die gedanklichen Techniken zur Veränderung dieser Muster. Zentral ist die Entwicklung einer achtsamen inneren Haltung: Gedanken sollen nicht sofort bekämpft, sondern zunächst bewusst und bewertungsfrei wahrgenommen werden. Dies ermöglicht eine Distanz zu belastenden Gedanken und die Entwicklung eines „beobachtenden Ichs“, das nicht automatisch auf jedes Gedankenmuster reagiert. Mentales Stressmanagement unterscheidet sich dabei deutlich vom naiven „positiven Denken“, das oft unrealistische Erwartungen weckt.
+
+Stattdessen werden individuelle Einstellungen und „Sollwerte“ als tief verankerte Bewältigungsmuster gewürdigt, die achtsam hinterfragt und verändert werden können. Das Training basiert auf dem transaktionalen Stressmodell und setzt an vier zentralen Ebenen mentaler Prozesse an:
+
+1. Persönliche Sollwerte: Stress entsteht oft durch rigide, überhöhte Anforderungen an sich selbst. Ziel ist es, diese zu flexibilisieren.
+2. Bewertung von Anforderungen: Stressverstärkende Denkmuster (z. B. Katastrophisieren) sollen durch alternative Sichtweisen ersetzt werden.
+3. Selbsteinschätzung der Bewältigungskompetenz: Negative Selbstbilder und Hilflosigkeit sollen durch Fokus auf eigene Stärken und Ressourcen relativiert werden.
+4. Bewertung akuter Stressreaktionen: Eine akzeptierende Haltung gegenüber körperlichen und emotionalen Stressreaktionen verhindert deren Verstärkung.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Welche deiner Gedanken erzeugen regelmäßig Stress?</li><li>Welche starren Sollwerte erkennst du bei dir selbst?</li><li>Wie gehst du mit deinen körperlichen Stressreaktionen um?</li><li>Wie könnte eine achtsame Haltung dir helfen, gelassener zu bleiben?</li></ul>
+      </div>
+    </section>
+    
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 2</h2>
+      <p class="mb-4 whitespace-pre-line">Das methodische Vorgehen vereint kognitiv-verhaltenstherapeutische und achtsamkeitsbasierte Ansätze. In fünf aufeinander aufbauenden Schritten lernen die Teilnehmenden, den Zusammenhang zwischen Gedanken und Stress zu verstehen, typische Denkmuster zu erkennen, förderliche Alternativen zu entwickeln, persönliche Stressverstärker zu entschärfen und neue Einstellungen nachhaltig zu verankern.
+
+Ziel ist eine verbesserte Selbststeuerung im Umgang mit Belastungen – realistisch, achtsam und mitfühlend sich selbst gegenüber. Los geht’s!</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Wie stark beeinflussen deine Gedanken deine tägliche Belastung?</li><li>Welche Denkgewohnheiten möchtest du hinterfragen?</li><li>Wie könntest du dich selbst achtsamer und mitfühlender behandeln?</li><li>Was erwartest du dir von diesem Mentaltraining konkret?</li></ul>
+      </div>
+    </section>
+    
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 3</h2>
+      <p class="mb-4 whitespace-pre-line">Gedanken und Stress: Gedanken bzw. das Verschmelzen von Gedanken mit der Wirklichkeit – also das Wahrnehmen eines Gedankens als wäre dieser Realität – können Stress verursachen. Beispielsweise kann der Gedanke an eine Spinne – oder gar das Wort „Spinne“ – bei einem Spinnenphobiker zu einer Stressreaktion führen.
+
+Auch im alltäglichen Gebrauch unserer „inneren Stimme“ können Stress oder Druckgefühle durch Gedanken ausgelöst werden.
+
+Übung: Stelle dir eine unangenehme Situation der letzten Zeit vor – z. B. eine Deadline oder ein Gespräch mit dem Chef – und male sie dir möglichst detailliert aus.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Was hast du in der vorgestellten Situation erlebt?</li><li>Welche Gedanken und Gefühle sind dabei aufgetaucht?</li><li>Wie hat dein Körper reagiert?</li><li>Was lernst du daraus für den Umgang mit zukünftigen Stressmomenten?</li></ul>
+      </div>
+    </section>
+    
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 4</h2>
+      <p class="mb-4 whitespace-pre-line">Ein zentrales Element des Mentaltrainings besteht darin, sich mit typischen stressverschärfenden Denkmustern auseinanderzusetzen und diese in förderliche Denkweisen zu überführen.
+
+Alternative Interpretationen: Wir halten unsere Wahrnehmung oft für die einzige Wahrheit. Doch wie Gedanken unterliegen auch unsere Interpretationen bestimmten Verzerrungen und können unterschiedlich ausfallen.
+
+Schau dir nun folgende Bilder an und überlege, was du zuerst erkennst – und was das über deine Denkmuster aussagen könnte.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Wie oft glaubst du deinen Gedanken ungeprüft?</li><li>Erkennst du Situationen, in denen du deine Perspektive erweitern könntest?</li><li>Was kannst du tun, um gedankliche Automatismen aufzubrechen?</li></ul>
+      </div>
+    </section>
+    
+<section class="bg-white p-6 rounded-xl shadow mb-6">
+  <img src="../assets/img/mentaltraining.jpg" alt="Mentale Perspektivbilder" class="mx-auto rounded-lg shadow-md">
+</section>
+
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 5</h2>
+      <p class="mb-4 whitespace-pre-line">Bei genauerem Hinsehen kannst du im linken Bild sowohl einen Kelch (hell) als auch zwei Gesichter (dunkel) erkennen. Im rechten Bild ist je nach Fokus eine junge oder eine ältere Frau zu sehen.
+
+Genauso wie bei diesen Bildern, lässt auch unsere innere Bewertung oft verschiedene Sichtweisen zu.
+
+Übung: Denke an eine stressauslösende Situation. Welche Gedanken gehen dir durch den Kopf?</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Wie müsste ich denken, um möglichst großen Stress zu erleben?</li><li>Wie müsste ich denken, um möglichst wenig Stress zu erleben?</li><li>Welche deiner typischen Gedankenmuster erkennst du wieder?</li></ul>
+      </div>
+    </section>
+    
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 6</h2>
+      <p class="mb-4 whitespace-pre-line">Denkmuster und Gedanken – Was tun?
+
+Eine naheliegende Strategie ist es, belastende Gedanken zu unterdrücken oder loszuwerden. Aber funktioniert das?
+
+Übung: Denke 30 Sekunden NICHT an einen rosa Elefanten! Starte jetzt einen Timer...
+
+Nachbearbeitung: Wie oft hast du dennoch daran gedacht? Die meisten Menschen erleben genau das – Gedanken lassen sich nicht einfach unterdrücken.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>In welchen Alltagssituationen versuchst du, Gedanken zu vermeiden?</li><li>Was war das Ergebnis dieser Gedankenunterdrückung?</li><li>Was könntest du stattdessen versuchen?</li></ul>
+      </div>
+    </section>
+    
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 7</h2>
+      <p class="mb-4 whitespace-pre-line">Vielleicht hast du festgestellt: Gedankenverdrängung funktioniert selten. Stattdessen hilft es, sich von Gedanken zu distanzieren – ohne sie zu bekämpfen.
+
+In der ACT (Akzeptanz- und Commitment-Therapie) werden sogenannte Defusionstechniken verwendet: Methoden, um sich von Gedanken zu lösen und ihnen weniger Macht zu geben.
+
+Gedanken sind nicht Realität – sondern Bilder und Worte im Kopf.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Welche Gedanken haben bei dir besonders viel Macht?</li><li>Wie könntest du dich davon innerlich distanzieren?</li><li>Was bedeutet es für dich, Gedanken nur als Gedanken zu betrachten?</li></ul>
+      </div>
+    </section>
+    
+    <section class="bg-white p-6 rounded-xl shadow mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 8</h2>
+      <p class="mb-4 whitespace-pre-line">Defusionstechniken – eine Auswahl:
+
+1. Benenne, was dein Verstand sagt: „Ich bemerke, dass ich gerade denke …“
+2. Schreibe Gedanken auf – so wie sie kommen, ungefiltert.
+3. Stell dir vor, die Gedanken treiben auf Blättern einen Fluss hinab.
+4. Gedankenradio: Lass sie „im Hintergrund“ laufen wie Radiomusik.
+
+Wichtig: Übung macht den Unterschied – probiere mehrere Techniken aus und finde deine passende.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+        <strong>Reflexionsfragen:</strong>
+        <ul class="list-disc list-inside mt-2"><li>Welche Technik möchtest du als erstes ausprobieren?</li><li>Wie kannst du dich regelmäßig an deine Gedankenbeobachtung erinnern?</li><li>Wie fühlt sich der Umgang mit belastenden Gedanken jetzt an?</li></ul>
+      </div>
+    </section>
+    
+
+  
+
+
+ <!-- Fortschrittsanzeige -->
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-xl font-semibold mb-2">Fortschritt</h2>
+    <label class="inline-flex items-center mt-2">
+      <input type="checkbox" id="modul2_done" class="form-checkbox h-5 w-5 text-blue-600" />
+      <span class="ml-2">Modul 2 abgeschlossen</span>
+    </label>
+  </section>
+
+  <!-- Link zu Modul 3, erst sichtbar wenn Modul 2 abgeschlossen -->
+<div id="modul3_link_section" class="hidden text-right">
+  <a href="../module3/module3.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Weiter zu Modul 3</a>
+</div>
+
+
+
+</body>
+</html>
