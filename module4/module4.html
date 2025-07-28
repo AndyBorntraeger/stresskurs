@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modul 4 – Das Genusstraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach((cb) => {
+        const saved = localStorage.getItem(cb.id);
+        if (saved) cb.checked = true;
+        cb.addEventListener('change', () => {
+          localStorage.setItem(cb.id, cb.checked);
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+  <h1 class="text-3xl font-bold text-blue-700 mb-4">Modul 4: Das Genusstraining</h1>
+
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Modul 4 zum Anhören</h2>
+    <audio controls class="w-full">
+      <source src="../assets/audio/modul4_intro.wav" type="audio/wav" />
+      Dein Browser unterstützt kein Audioelement.
+    </audio>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 1</h2>
+    <p class="mb-4 whitespace-pre-line">In diesem Modul geht es darum, die regenerative Stresskompetenz zu stärken – also gezielt für Erholung und Ausgleich im Alltag zu sorgen. Ziel ist eine gesunde Balance zwischen Belastung und Erholung, insbesondere zwischen Arbeit und Freizeit.
+
+Viele Menschen leben in einer leistungsgetriebenen Gesellschaft, in der Arbeit und Erfolg oft das Zentrum der Identität bilden. Daraus entstehen Selbstüberforderung, lange Arbeitszeiten und Vernachlässigung von Freizeit und sozialen Kontakten. Erholung wird häufig unterschätzt oder auf den Ruhestand verschoben. Doch: Ohne regelmäßige Regeneration sinken Gesundheit und Leistungsfähigkeit – wie in der Sportwissenschaft gilt auch im Alltag das Prinzip: Erholung ist essenziell.
+
+Zugleich gibt es auch eine andere Belastung: der "Freizeitstress". Manche Menschen sind auch in ihrer Freizeit überaktiv, planen zu viel und erleben keine echte Erholung, weil sie Leistungsdruck und Perfektionismus aus der Arbeit mitnehmen. Auch dieses Verhalten soll im Kurs hinterfragt werden – Muße, Genuss und innere Ruhe sollen gefördert werden.
+
+Um die genannten Ziele zu erreichen, reicht es in der Regel nicht aus, Menschen einfach nur aufzufordern, „etwas Schönes zu machen“. Viele Menschen haben im Laufe der Zeit den Bezug zu angenehmen Aktivitäten verloren oder erleben ihre Freizeit als stressig, sinnentleert oder leistungsorientiert. Manche wissen gar nicht mehr, was ihnen Freude bereitet, andere fühlen sich von Alltagspflichten überfordert und glauben, keine Zeit oder Energie für Genuss zu haben. Wieder andere betreiben viele Aktivitäten, können sie aber nicht wirklich genießen.</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Wie gehst du aktuell mit deiner Erholung im Alltag um?</li><li>Welche Rolle spielen Arbeit und Leistung in deinem Leben?</li><li>Hast du schon einmal erlebt, dass zu viel Freizeitstress dich belastet?</li><li>Welche Aktivitäten bereiten dir wirklich Freude und Entspannung?</li><li>Was hindert dich daran, mehr Muße und Genuss zu erleben?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 2</h2>
+    <p class="mb-4 whitespace-pre-line">Damit Freizeit wieder als wohltuend erlebt wird, ist es wichtig:
+
+1) Ein Gespür für Erholungsbedürfnisse zu entwickeln, 2) Aktivitäten nicht als zusätzliche Pflicht oder Leistung zu sehen, 3) sich nicht durch belastende Gedanken ablenken zu lassen, und auch Müßiggang als wertvoll zu begreifen.
+
+Statt sofort mit der Umsetzung angenehmer Tätigkeiten zu starten, ist es hilfreicher, zunächst den Zugang zu positiven Emotionen wieder zu stärken – etwa durch das Erinnern an frühere schöne Erlebnisse und durch erlebnisaktivierende Übungen. Erst danach wird auf Verhaltensebene gearbeitet: Sie planen dann konkrete Aktivitäten (oder bewusste Passivität), setzen sie um und reflektieren Ihre Erfahrungen. Verlassen Sie sich dabei auch auf Ihre sozialen Beziehungen, reflektieren Sie beispielsweise gemeinsam. Am Ende entwickeln Sie ein persönliches Gesundheitsprojekt, das über den Kurs hinauswirkt.
+
+Die allgemeine Stressbelastung kann auch als eine Art “Stresswaage” begri en werden.
+
+Stellen Sie sich dabei eine Waage mit Waagschalen vor, wie Sie noch auf einigen Märkten zu finden sind. Stellen Sie sich nun vor, dass Sie für jede Belastung auf der einen und jede Entlastung auf der anderen Seite ein Gewicht auf die Waage legen. Die Größe und Schwere der einzelnen Gewichte sind dabei individuell sehr unterschiedlich. Würde Ihre Waage im ausgewogen sein?</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Wie erkennst du deine eigenen Erholungsbedürfnisse?</li><li>In welchen Situationen empfindest du Freizeit als zusätzliche Pflicht?</li><li>Wie gelingt es dir, belastende Gedanken während der Freizeit loszulassen?</li><li>Was bedeutet für dich „Müßiggang“ und wie könntest du ihn wertschätzen?</li><li>Welche kleinen positiven Erlebnisse kannst du täglich bewusst wahrnehmen?</li></ul>
+    </div>
+  </section>
+
+  <section class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Abschnitt 3</h2>
+    <p class="mb-4 whitespace-pre-line">Es gibt zahlreiche und vielfältige Übungen, die sich zur täglichen Ausführung eignen. Dabei sind Ihrer Fantasie keine Grenzen gesetzt. Denken Sie sich einfach eine Übung für sich selbst aus! Ob das bewusste Essen eines Stückes Schokolade, der bewusste Genuss einer Tasse Kaffee oder das bewusste Riechen des Frühlingsduftes im Wald. Folgen Sie einfach der Regel:
+
+Eine Tätigkeit zur gleichen Zeit. Riechen Sie z.B. bewusst an Blumen, an Ihrem Morgenkaffee oder nehmen Sie den Duft des Meeres im Urlaub wahr. Sie können dabei alle Sinne trainieren (Tasten, Riechen, Schmecken, Hören, Sehen). Denken Sie sich einfach etwas aus und genießen Sie es Ihre Sinne zu schulen.</p>
+    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mt-4">
+      <strong>Reflexionsfragen:</strong>
+      <ul class="list-disc list-inside mt-2"><li>Welche Sinnesreize erlebst du besonders intensiv?</li><li>Welche deiner Sinne würdest du gerne bewusster trainieren?</li><li>Welche Tätigkeit könntest du täglich bewusst genießen?</li><li>Wie fühlt es sich an, wenn du etwas mit allen Sinnen wahrnimmst?</li><li>Gibt es Momente, in denen du komplett im Hier und Jetzt bist?</li></ul>
+    </div>
+  </section>
+
+  
+
+  
+
+
+
+
+
+
+
+<section class="text-center mt-6 mb-12">
+  <p>Weitere Informationen und Angebote findest du auf unserer Webseite:</p>
+  <a href="https://vorwärtsdenken.de" target="_blank" class="text-blue-600 hover:underline font-semibold">vorwärtsdenken.de</a>
+</section>
+
+
+<div class="text-center mb-6">
+  <button id="abschluss-button" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 focus:outline-none">
+    Training abschließen
+  </button>
+</div>
+
+<script>
+  document.getElementById('abschluss-button').addEventListener('click', function() {
+    this.style.display = 'none';
+    var message = document.getElementById('abschluss-message');
+    message.style.display = 'block';
+    message.scrollIntoView({behavior: 'smooth'});
+  });
+</script>
+
+<section id="abschluss-message" class="bg-green-100 p-6 rounded-xl shadow mb-6" style="display:none;">
+  <h2 class="text-2xl font-semibold mb-4 text-green-700">Herzlichen Glückwunsch!</h2>
+  <p>Du hast das Stressmanagement-Training erfolgreich abgeschlossen. Nutze die erlernten Methoden im Alltag und bleibe achtsam mit dir selbst.</p>
+  <p>Wir wünschen dir viel Erfolg und Freude dabei!</p>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  const {{ jsPDF }} = window.jspdf;
+
+  document.getElementById('abschluss-button').addEventListener('click', function() {{
+    this.style.display = 'none';
+    var message = document.getElementById('abschluss-message');
+    message.style.display = 'block';
+    message.scrollIntoView({{behavior: 'smooth'}});
+    
+    // PDF erzeugen
+    const doc = new jsPDF();
+
+    doc.setFontSize(22);
+    doc.text("Zertifikat", 105, 30, null, null, "center");
+
+    doc.setFontSize(16);
+    doc.text("Herzlichen Glückwunsch!", 105, 50, null, null, "center");
+
+    doc.setFontSize(12);
+    const name = "Teilnehmer/in";
+    doc.text("Dieses Zertifikat bestätigt, dass", 105, 70, null, null, "center");
+    doc.text(name, 105, 80, null, null, "center");
+    doc.text("das Stressmanagement-Training erfolgreich abgeschlossen hat.", 105, 90, null, null, "center");
+
+    // aktuelles Datum
+    const heute = new Date();
+    const datum = heute.toLocaleDateString();
+    doc.text("Datum: " + datum, 105, 110, null, null, "center");
+
+    doc.save("Zertifikat_Stressmanagement.pdf");
+  }});
+</script>
+
+</body>
+</html>
