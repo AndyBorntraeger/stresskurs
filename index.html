@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Passwortgeschützt</title>
   <style>
     body {
@@ -13,6 +13,7 @@
       height: 100vh;
       align-items: center;
       justify-content: center;
+      margin: 0;
     }
     .container {
       background: white;
@@ -22,6 +23,11 @@
       text-align: center;
       max-width: 400px;
       width: 100%;
+      animation: fadeIn 0.6s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     input[type="password"] {
       padding: 10px;
@@ -41,13 +47,26 @@
       cursor: pointer;
       width: 100%;
     }
-    button:hover {
+    button:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+    button:hover:not(:disabled) {
       background-color: #1e40af;
     }
     .error {
       color: red;
       margin-top: 1rem;
-      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .error.show {
+      opacity: 1;
+    }
+    .info {
+      margin-top: 0.5rem;
+      color: #555;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -55,24 +74,92 @@
   <div class="container">
     <h2>🔒 Geschützter Bereich</h2>
     <p>Bitte gib das Passwort ein, um fortzufahren:</p>
-    <input type="password" id="passwordInput" placeholder="Passwort eingeben">
-    <button onclick="checkPassword()">Einloggen</button>
+    <input type="password" id="passwordInput" placeholder="Passwort eingeben" />
+    <button id="loginButton" onclick="checkPassword()">Einloggen</button>
     <p class="error" id="errorMessage">Falsches Passwort. Bitte erneut versuchen.</p>
+    <p class="error" id="lockMessage" style="display:none;">Zu viele Fehlversuche. Bitte warte <span id="countdown">60</span> Sekunden.</p>
+    <p class="info" id="attemptInfo"></p>
   </div>
 
   <script>
     const correctPassword = "K$7!eBv9@xZ#rA21";
     const redirectURL = "kurs.html";
+    const maxAttempts = 3;
+    const lockDuration = 60;
+
+    let attempts = 0;
+    let isLocked = false;
+
+    window.onload = () => {
+      if (localStorage.getItem("access_granted") === "true") {
+        window.location.href = redirectURL;
+      }
+
+      const lockUntil = localStorage.getItem("lock_until");
+      if (lockUntil && parseInt(lockUntil) > Date.now()) {
+        activateLock(parseInt(lockUntil));
+      } else {
+        updateAttemptInfo();
+      }
+    };
 
     function checkPassword() {
+      if (isLocked) return;
       const entered = document.getElementById("passwordInput").value;
       const errorMsg = document.getElementById("errorMessage");
 
       if (entered === correctPassword) {
+        localStorage.setItem("access_granted", "true");
         window.location.href = redirectURL;
       } else {
-        errorMsg.style.display = "block";
+        attempts++;
+        errorMsg.classList.add("show");
+        updateAttemptInfo();
+
+        if (attempts >= maxAttempts) {
+          const lockUntil = Date.now() + lockDuration * 1000;
+          localStorage.setItem("lock_until", lockUntil);
+          activateLock(lockUntil);
+        }
       }
+    }
+
+    function updateAttemptInfo() {
+      const info = document.getElementById("attemptInfo");
+      const remaining = maxAttempts - attempts;
+      if (remaining > 0) {
+        info.textContent = `🔁 Noch ${remaining} Versuch(e) bis zur Sperre.`;
+      } else {
+        info.textContent = "";
+      }
+    }
+
+    function activateLock(until) {
+      isLocked = true;
+      const lockMsg = document.getElementById("lockMessage");
+      const errorMsg = document.getElementById("errorMessage");
+      const loginBtn = document.getElementById("loginButton");
+      const countdown = document.getElementById("countdown");
+      const info = document.getElementById("attemptInfo");
+
+      lockMsg.style.display = "block";
+      errorMsg.style.display = "none";
+      info.textContent = "";
+      loginBtn.disabled = true;
+
+      const interval = setInterval(() => {
+        const remaining = Math.ceil((until - Date.now()) / 1000);
+        countdown.textContent = remaining;
+        if (remaining <= 0) {
+          clearInterval(interval);
+          isLocked = false;
+          attempts = 0;
+          localStorage.removeItem("lock_until");
+          lockMsg.style.display = "none";
+          loginBtn.disabled = false;
+          updateAttemptInfo();
+        }
+      }, 1000);
     }
   </script>
 </body>
