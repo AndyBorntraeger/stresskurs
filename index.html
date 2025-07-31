@@ -4,162 +4,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Passwortgeschützt</title>
+  <title>Stresskurs – Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #cfd9df, #e2ebf0);
-      display: flex;
-      height: 100vh;
-      align-items: center;
-      justify-content: center;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .container {
-      background: white;
+
+    body, html {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+    }
+
+    .background {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/bg-stresskurs.jpg') center/cover no-repeat;
+      z-index: 0;
+      filter: brightness(0.6);
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 600;
+      z-index: 2;
+      backdrop-filter: blur(6px);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .headline-box {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .headline-box h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .headline-box p {
+      font-size: 1.3rem;
+      color: #ddd;
+      margin-top: 0.5rem;
+    }
+
+    .login-box {
+      background: rgba(0,0,0,0.6);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 320px;
       text-align: center;
-      max-width: 400px;
-      width: 100%;
-      animation: fadeIn 0.6s ease;
+      backdrop-filter: blur(8px);
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    input[type="password"] {
-      padding: 10px;
-      font-size: 1rem;
-      width: 100%;
+
+    .login-box h2 {
+      font-size: 1.3rem;
       margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    button {
-      background-color: #2563eb;
       color: white;
-      border: none;
-      padding: 10px 16px;
+    }
+
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
       font-size: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: white;
+      color: #222;
+      border: none;
       border-radius: 8px;
       cursor: pointer;
-      width: 100%;
+      transition: background 0.3s ease;
     }
-    button:disabled {
-      background-color: #9ca3af;
-      cursor: not-allowed;
+
+    .login-box button:hover {
+      background: #eee;
     }
-    button:hover:not(:disabled) {
-      background-color: #1e40af;
-    }
-    .error {
-      color: red;
-      margin-top: 1rem;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .error.show {
-      opacity: 1;
-    }
-    .info {
+
+    .error-message {
+      color: #ff8888;
       margin-top: 0.5rem;
-      color: #555;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>🔒 Geschützter Bereich</h2>
-    <p>Bitte gib das Passwort ein, um fortzufahren:</p>
-    <input type="password" id="passwordInput" placeholder="Passwort eingeben" />
-    <button id="loginButton" onclick="checkPassword()">Einloggen</button>
-    <p class="error" id="errorMessage">Falsches Passwort. Bitte erneut versuchen.</p>
-    <p class="error" id="lockMessage" style="display:none;">Zu viele Fehlversuche. Bitte warte <span id="countdown">60</span> Sekunden.</p>
-    <p class="info" id="attemptInfo"></p>
+  <div class="background"></div>
+
+  <header>VORWÄRTSDENKEN</header>
+
+  <div class="content">
+    <div class="headline-box">
+      <p>Starte jetzt deinen digitalen Stressbewältigungskurs</p>
+    </div>
+    <div class="login-box">
+      <h2>Passwort eingeben</h2>
+      <form onsubmit="return checkPassword();">
+        <input type="password" id="password" placeholder="Passwort" required />
+        <button type="submit">Kurs starten</button>
+        <p class="error-message" id="error"></p>
+      </form>
+    </div>
   </div>
 
   <script>
-    const correctPassword = "K$7!eBv9@xZ#rA21";
-    const redirectURL = "kurs.html";
-    const maxAttempts = 3;
-    const lockDuration = 60;
-
-    let attempts = 0;
-    let isLocked = false;
-
-    window.onload = () => {
-      if (localStorage.getItem("access_granted") === "true") {
-        window.location.href = redirectURL;
-      }
-
-      const lockUntil = localStorage.getItem("lock_until");
-      if (lockUntil && parseInt(lockUntil) > Date.now()) {
-        activateLock(parseInt(lockUntil));
-      } else {
-        updateAttemptInfo();
-      }
-    };
-
     function checkPassword() {
-      if (isLocked) return;
-      const entered = document.getElementById("passwordInput").value;
-      const errorMsg = document.getElementById("errorMessage");
+      const correctPassword = "K$7!eBv9@xZ#rA21";
+      const input = document.getElementById("password").value;
 
-      if (entered === correctPassword) {
-        localStorage.setItem("access_granted", "true");
-        window.location.href = redirectURL;
+      if (input === correctPassword) {
+        window.location.href = "kurs.html";
+        return false;
       } else {
-        attempts++;
-        errorMsg.classList.add("show");
-        updateAttemptInfo();
-
-        if (attempts >= maxAttempts) {
-          const lockUntil = Date.now() + lockDuration * 1000;
-          localStorage.setItem("lock_until", lockUntil);
-          activateLock(lockUntil);
-        }
+        document.getElementById("error").textContent = "Falsches Passwort!";
+        return false;
       }
-    }
-
-    function updateAttemptInfo() {
-      const info = document.getElementById("attemptInfo");
-      const remaining = maxAttempts - attempts;
-      if (remaining > 0) {
-        info.textContent = `🔁 Noch ${remaining} Versuch(e) bis zur Sperre.`;
-      } else {
-        info.textContent = "";
-      }
-    }
-
-    function activateLock(until) {
-      isLocked = true;
-      const lockMsg = document.getElementById("lockMessage");
-      const errorMsg = document.getElementById("errorMessage");
-      const loginBtn = document.getElementById("loginButton");
-      const countdown = document.getElementById("countdown");
-      const info = document.getElementById("attemptInfo");
-
-      lockMsg.style.display = "block";
-      errorMsg.style.display = "none";
-      info.textContent = "";
-      loginBtn.disabled = true;
-
-      const interval = setInterval(() => {
-        const remaining = Math.ceil((until - Date.now()) / 1000);
-        countdown.textContent = remaining;
-        if (remaining <= 0) {
-          clearInterval(interval);
-          isLocked = false;
-          attempts = 0;
-          localStorage.removeItem("lock_until");
-          lockMsg.style.display = "none";
-          loginBtn.disabled = false;
-          updateAttemptInfo();
-        }
-      }, 1000);
     }
   </script>
 </body>
