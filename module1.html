@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modul 1 – Entspannungstraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+  .bg-ziele {
+    background: url('https://www.dropbox.com/scl/fi/7plcptbqhebhajjblxbxp/ziele.jpg?rlkey=ebs807tdrd8ds4j0y2479uulw&raw=1') center/cover no-repeat;
+  }
+  .bg-pmr {
+    background: url('https://www.dropbox.com/scl/fi/ydkpw7k932ra6pmsefl9z/pmr.jpg?rlkey=sj7iop7a9kw0wt06x53a2w62q&raw=1') center/cover no-repeat;
+  }
+  .bg-audio {
+    background: url('https://www.dropbox.com/scl/fi/q4nu0wgkiuf3l6f0a2qhm/audio.jpg?rlkey=nbsuq2cfky7ppnwui7k9amov0&raw=1') center/cover no-repeat;
+  }
+  .bg-arbeitsblatt {
+    background: url('https://www.dropbox.com/scl/fi/6477mpda2ztkei0s56u03/blatt.jpg?rlkey=596prm1kfgi1a5h93sq74l4fc&raw=1') center/cover no-repeat;
+  }
+
+  details {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+  }
+
+  details summary {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  details > *:not(summary) {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+</style>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function closeAllAccordions(except = null) {
+        document.querySelectorAll("details").forEach(d => {
+          if (d !== except) d.open = false;
+        });
+      }
+
+      function openAndScrollTo(hash) {
+        const target = document.querySelector(hash);
+        if (target && target.tagName.toLowerCase() === "section") {
+          const details = target.querySelector("details");
+          if (details) {
+            closeAllAccordions(details);
+            details.open = true;
+            const yOffset = -120;
+            const y = details.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      }
+
+      if (window.location.hash) {
+        openAndScrollTo(window.location.hash);
+      }
+
+      document.querySelectorAll("a[href^='#']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const hash = this.getAttribute("href");
+          history.pushState(null, null, hash);
+          openAndScrollTo(hash);
+        });
+      });
+
+      document.querySelectorAll("details summary").forEach(summary => {
+        summary.addEventListener("click", function (e) {
+          const details = this.parentElement;
+          if (!details.open) {
+            closeAllAccordions(details);
+            details.open = true;
+          } else {
+            details.open = false;
+          }
+          e.preventDefault();
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#ziele">Ziele von Entspannung</a>
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#pmr">Die Progressive Muskelentspannung</a>
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#audio">Praxis & Audioanleitung</a>
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#arbeitsblatt">Arbeitsblatt</a>
+  </div>
+
+</nav>
+<div class="h-16"></div>
+
+<h1 class="text-3xl font-bold text-blue-700 mb-4">Modul 1: Entspannungstraining</h1>
+
+<!-- Audio Intro -->
+<section class="mb-6">
+  <h2 class="text-xl font-semibold mb-2">Einführung zum Anhören</h2>
+  <audio class="w-full" controls>
+    <source src="https://www.dropbox.com/scl/fi/0j7ob2oych1d4swi28oqt/Modul-1-Das-Entspannungstraining.wav?rlkey=tr1i1lk1fvyk2ho55oyzc9jjw&st=0ltu9lu4&raw=1" type="audio/wav" />
+    Dein Browser unterstützt kein Audioelement.
+  </audio>
+</section>
+
+<!-- Übersichtsbilder -->
+<!-- Übersichtsbilder -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 mb-12">
+
+  <!-- Kachel 1: Ziele von Entspannung -->
+  <a href="#ziele" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 4</span>
+    <img src="https://www.dropbox.com/scl/fi/7plcptbqhebhajjblxbxp/ziele.jpg?rlkey=ebs807tdrd8ds4j0y2479uulw&raw=1" alt="Ziele" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Ziele von Entspannung</h3>
+      <p class="text-sm text-gray-600">Spannung erkennen, lösen und langfristig reduzieren.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 2: Progressive Muskelentspannung -->
+  <a href="#pmr" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 4</span>
+    <img src="https://www.dropbox.com/scl/fi/ydkpw7k932ra6pmsefl9z/pmr.jpg?rlkey=sj7iop7a9kw0wt06x53a2w62q&raw=1" alt="PMR" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Progressive Muskelentspannung</h3>
+      <p class="text-sm text-gray-600">Die Methode verstehen und korrekt anwenden.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 3: Praxis & Audio -->
+  <a href="#audio" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 4</span>
+    <img src="https://www.dropbox.com/scl/fi/q4nu0wgkiuf3l6f0a2qhm/audio.jpg?rlkey=nbsuq2cfky7ppnwui7k9amov0&raw=1" alt="Audioanleitung" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Praxis & Audioanleitung</h3>
+      <p class="text-sm text-gray-600">Anleitung anhören und mitmachen.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 4: Arbeitsblatt -->
+  <a href="#arbeitsblatt" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 4 von 4</span>
+    <img src="https://www.dropbox.com/scl/fi/6477mpda2ztkei0s56u03/blatt.jpg?rlkey=596prm1kfgi1a5h93sq74l4fc&raw=1" alt="Arbeitsblatt" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Arbeitsblatt</h3>
+      <p class="text-sm text-gray-600">Praktisch umsetzen und reflektieren.</p>
+    </div>
+  </a>
+
+</section>
+
+<!-- Button zum Starten -->
+<div class="w-full flex justify-center my-12">
+  <a href="#ziele"
+     class="block w-full md:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow transition duration-300">
+    Jetzt mit dem Abschnitt „Ziele von Entspannung“ starten
+  </a>
+</div>
+
+
+<!-- Akkordeon-Abschnitte -->
+<section class="bg-white p-6 rounded-xl shadow mb-6" id="ziele">
+  <details class="mb-4 bg-ziele">
+    <summary>Ziele von Entspannung</summary>
+    <p class="mb-4 whitespace-pre-line">
+Die progressive Muskelentspannung (PMR) verfolgt vier zentrale Ziele, die dir helfen, dein Stresslevel langfristig zu senken und deine Körperwahrnehmung zu stärken:
+
+• Spannungswahrnehmung verbessern: Erkenne körperliche Anspannung frühzeitig und bewusst.
+• Gezielter Wechsel von Anspannung und Entspannung: Trainiere den natürlichen Rhythmus deines Körpers.
+• Genuss und Bewusstheit für Entspannung: Lerne, Entspannung als positives Erlebnis wahrzunehmen.
+• Alltagstransfer: Integriere Entspannungsphasen strategisch in deinen Tagesablauf.
+    </p>
+  </details>
+</section>
+
+<section class="bg-white p-6 rounded-xl shadow mb-6" id="pmr">
+  <details class="mb-4 bg-pmr">
+    <summary>Die Progressive Muskelentspannung</summary>
+    <p class="mb-4 whitespace-pre-line">
+Das Grundprinzip der Methode ist simpel: Es geht um den gezielten Wechsel zwischen Anspannung und Entspannung einzelner Muskelgruppen.
+
+Dabei wird jeweils eine Muskelpartie für ein paar Sekunden angespannt, während normal weitergeatmet wird. Mit dem Ausatmen wird die Spannung gelöst, und die Entspannung soll bewusst wahrgenommen und für einen kurzen Zeitraum vertieft werden.
+
+Dieser Ablauf kann mehrfach wiederholt werden, bis sich eine spürbare Entspannung in der jeweiligen Muskelgruppe einstellt.
+    </p>
+  </details>
+</section>
+
+<section class="bg-white p-6 rounded-xl shadow mb-6" id="audio">
+  <details class="mb-4 bg-audio">
+    <summary>Praxis & Audioanleitung</summary>
+    <p class="mb-4 whitespace-pre-line">
+Grundsätzlich gibt es verschiedene Methoden, um eine Entspannung im Alltag herbeizuführen. Die progressive Muskelentspannung stellt neben dem autogenen Training eine der am weitesten verbreiteten Methoden dar.
+
+Die Methode ist am einfachsten zu verstehen, indem sie ausgeführt wird. Nutzen Sie dazu die bereitgestellten Dateien:
+    </p>
+    <audio class="w-full mt-2" controls>
+      <source src="https://www.dropbox.com/scl/fi/ialdsnnnelrnnz9hdeg2x/entspannung.mp3?rlkey=z38ugadprr49ibzqtv3kiumfl&st=m3ca9kou&raw=1" type="audio/wav" />
+    </audio>
+  </details>
+</section>
+
+<section class="bg-white p-6 rounded-xl shadow mb-6" id="arbeitsblatt">
+  <details class="mb-4 bg-arbeitsblatt">
+    <summary>Arbeitsblatt</summary>
+    <p class="mb-4 whitespace-pre-line">
+Nutzen Sie das folgende Arbeitsblatt, um Ihre Erfahrungen mit der Methode zu dokumentieren und den Alltagstransfer zu reflektieren.
+    </p>
+    <iframe class="w-full h-64 mt-2 border rounded" src="https://www.dropbox.com/scl/fi/w8gmltr7crjvofhxgy2d1/Reflektion-Arbeitsblatt-Entspannung.pdf?rlkey=61wb4zmprrmbvl01pcxvno0ls&st=u90bp8gb&raw=1"></iframe>
+<div class="mt-4 text-right">
+  <a href="https://www.dropbox.com/scl/fi/w8gmltr7crjvofhxgy2d1/Reflektion-Arbeitsblatt-Entspannung.pdf?rlkey=61wb4zmprrmbvl01pcxvno0ls&st=u90bp8gb&raw=1"
+     download
+     class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300">
+    Arbeitsblatt herunterladen
+  </a>
+</div>  
+</details>
+</section>
+
+<section class="bg-white p-6 rounded-xl shadow mb-6">
+  <details class="mb-4">
+    <summary>Fortschritt</summary>
+    <label class="inline-flex items-center mt-2">
+      <input class="form-checkbox h-5 w-5 text-blue-600" id="modul1_done" type="checkbox"/>
+      <span class="ml-2">Modul 1 abgeschlossen</span>
+    </label>
+  </details>
+</section>
+
+<div class="hidden text-right" id="modul2_link_section">
+  <a class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" href="module2.html">
+    Weiter zu Modul 2
+  </a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("modul1_done");
+    const linkSection = document.getElementById("modul2_link_section");
+    const saved = localStorage.getItem("modul1_done") === "true";
+    checkbox.checked = saved;
+    if (saved) {
+      linkSection.classList.remove("hidden");
+    }
+    checkbox.addEventListener("change", () => {
+      localStorage.setItem("modul1_done", checkbox.checked);
+      if (checkbox.checked) {
+        linkSection.classList.remove("hidden");
+      } else {
+        linkSection.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

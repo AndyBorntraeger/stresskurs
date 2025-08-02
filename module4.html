@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modul 4 – Genusstraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+<style>
+  .reflektionsbox {
+    background-color: #ebf4ff;
+    border-left: 4px solid #3182ce;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+.reflektionsbox strong {
+  font-weight: 700;
+  color: #2b6cb0;
+}
+
+
+.bg-genussbalance {
+    background: url('https://www.dropbox.com/scl/fi/de40op1i9ivpx27wv38ld/genussbalance.jpg?rlkey=14h9a8qh9zphf0a0t4kfqox37&raw=1') center/cover no-repeat;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+  }
+
+  .bg-genussbalance summary {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .bg-genussbalance > *:not(summary) {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .bg-balance {
+    background: url('https://www.dropbox.com/scl/fi/de40op1i9ivpx27wv38ld/genussbalance.jpg?rlkey=14h9a8qh9zphf0a0t4kfqox37&raw=1') center/cover no-repeat;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+  }
+
+  .bg-balance summary {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .bg-balance > *:not(summary) {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .bg-stresswaage {
+    background: url('https://www.dropbox.com/scl/fi/enmhw3vmr0pola9g5d571/stresswaage.jpg?rlkey=xty108z0nemvdjhjg907z0e39&raw=1') center/cover no-repeat;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+  }
+
+  .bg-stresswaage summary {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .bg-stresswaage > *:not(summary) {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .bg-genusstraining {
+    background: url('https://www.dropbox.com/scl/fi/7ulnljpl6cwq3rphj0cyk/genusstraining.jpg?rlkey=0sboa018ci41i7c46hx66t9yo&raw=1') center/cover no-repeat;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+  }
+
+  .bg-genusstraining summary {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .bg-genusstraining > *:not(summary) {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+</style>
+
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#balance">Einführung</a>
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#erholung">Erholungsbedürfnisse</a>
+    <a class="text-blue-700 hover:underline whitespace-nowrap" href="#genuss">Genusstraining</a>
+  </div>
+</nav>
+
+<!-- Platzhalter, damit der Inhalt nicht hinter der fixen Leiste verschwindet -->
+<div class="h-16"></div>
+
+
+  <h1 class="text-3xl font-bold text-blue-700 mb-4">Modul 4: Genusstraining</h1>
+
+  <!-- Audio-Einbindung -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Modul 4 zum Anhören</h2>
+    <audio class="w-full" controls>
+      <source src="https://www.dropbox.com/scl/fi/rxlpr2cpf8rg83aow7v8a/modul4_intro.wav?rlkey=h90clt6lz8x2ac8qft8xnevrv&st=87bbgy2l&raw=1" type="audio/mpeg">
+      Dein Browser unterstützt kein Audioelement.
+    </audio>
+  </section>
+
+  <!-- Bildkarten-Boxen oberhalb der Abschnitte -->
+  <!-- Interaktive Kachel-Boxen für Modul 4 -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 mt-8">
+
+  <!-- Kachel 1 -->
+  <a href="#balance" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 3</span>
+    <img src="https://www.dropbox.com/scl/fi/de40op1i9ivpx27wv38ld/genussbalance.jpg?rlkey=14h9a8qh9zphf0a0t4kfqox37&raw=1" alt="Balance" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Balance zwischen Belastung & Erholung</h3>
+      <p class="text-sm text-gray-600">Regenerative Stresskompetenz fördern.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 2 -->
+  <a href="#erholung" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 3</span>
+    <img src="https://www.dropbox.com/scl/fi/enmhw3vmr0pola9g5d571/stresswaage.jpg?rlkey=xty108z0nemvdjhjg907z0e39&raw=1" alt="Erholung" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Erholungsbedürfnisse erkennen</h3>
+      <p class="text-sm text-gray-600">Stresswaage ins Gleichgewicht bringen.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 3 -->
+  <a href="#genuss" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 3</span>
+    <img src="https://www.dropbox.com/scl/fi/7ulnljpl6cwq3rphj0cyk/genusstraining.jpg?rlkey=0sboa018ci41i7c46hx66t9yo&raw=1" alt="Genuss" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">Genuss mit allen Sinnen</h3>
+      <p class="text-sm text-gray-600">Wahrnehmung und Präsenz stärken.</p>
+    </div>
+  </a>
+
+</section>
+
+
+
+     <!-- Abschnitt 1 -->
+  <section class="bg-white p-6 rounded-xl shadow mb-6" id="balance">
+    <details class="mb-4 bg-genussbalance">
+      <summary class="text-lg font-semibold">1. Balance zwischen Belastung und Erholung</summary>
+      <p class="mb-4 whitespace-pre-line">
+In diesem Modul geht es darum, die regenerative Stresskompetenz zu stärken – also gezielt für Erholung und Ausgleich im Alltag zu sorgen. Ziel ist eine gesunde Balance zwischen Belastung und Erholung, insbesondere zwischen Arbeit und Freizeit.
+
+Viele Menschen leben in einer leistungsgetriebenen Gesellschaft, in der Arbeit und Erfolg oft das Zentrum der Identität bilden. Daraus entstehen Selbstüberforderung, lange Arbeitszeiten und Vernachlässigung von Freizeit und sozialen Kontakten. Erholung wird häufig unterschätzt oder auf den Ruhestand verschoben. Doch: Ohne regelmäßige Regeneration sinken Gesundheit und Leistungsfähigkeit – wie in der Sportwissenschaft gilt auch im Alltag das Prinzip: Erholung ist essenziell.
+
+Zugleich gibt es auch eine andere Belastung: der "Freizeitstress". Manche Menschen sind auch in ihrer Freizeit überaktiv, planen zu viel und erleben keine echte Erholung, weil sie Leistungsdruck und Perfektionismus aus der Arbeit mitnehmen. Auch dieses Verhalten soll im Kurs hinterfragt werden – Muße, Genuss und innere Ruhe sollen gefördert werden.
+
+Um die genannten Ziele zu erreichen, reicht es in der Regel nicht aus, Menschen einfach nur aufzufordern, „etwas Schönes zu machen“. Viele Menschen haben im Laufe der Zeit den Bezug zu angenehmen Aktivitäten verloren oder erleben ihre Freizeit als stressig, sinnentleert oder leistungsorientiert. Manche wissen gar nicht mehr, was ihnen Freude bereitet, andere fühlen sich von Alltagspflichten überfordert und glauben, keine Zeit oder Energie für Genuss zu haben. Wieder andere betreiben viele Aktivitäten, können sie aber nicht wirklich genießen.
+      </p>
+      <div class="reflektionsbox">
+        <strong>Reflektionsfragen:</strong>
+        <ul class="list-disc list-inside">
+          <li>Wie gehst du aktuell mit deiner Erholung im Alltag um?</li>
+          <li>Welche Rolle spielen Arbeit und Leistung in deinem Leben?</li>
+          <li>Hast du schon einmal erlebt, dass zu viel Freizeitstress dich belastet?</li>
+          <li>Welche Aktivitäten bereiten dir wirklich Freude und Entspannung?</li>
+          <li>Was hindert dich daran, mehr Muße und Genuss zu erleben?</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- Abschnitt 2 -->
+<section class="bg-white p-6 rounded-xl shadow mb-6" id="erholung">
+  <details class="mb-4 bg-stresswaage">
+    <summary class="text-lg font-semibold">2. Erholungsbedürfnisse erkennen & Stresswaage verstehen</summary>
+    <p class="mb-4 whitespace-pre-line">
+Damit Freizeit wieder als wohltuend erlebt wird, ist es wichtig:
+
+1) Ein Gespür für Erholungsbedürfnisse zu entwickeln,  
+2) Aktivitäten nicht als zusätzliche Pflicht oder Leistung zu sehen,  
+3) sich nicht durch belastende Gedanken ablenken zu lassen, und  
+4) auch Müßiggang als wertvoll zu begreifen.
+
+Statt sofort mit der Umsetzung angenehmer Tätigkeiten zu starten, ist es hilfreicher, zunächst den Zugang zu positiven Emotionen wieder zu stärken – etwa durch das Erinnern an frühere schöne Erlebnisse und durch erlebnisaktivierende Übungen. Erst danach wird auf Verhaltensebene gearbeitet: Sie planen dann konkrete Aktivitäten (oder bewusste Passivität), setzen sie um und reflektieren Ihre Erfahrungen. Verlassen Sie sich dabei auch auf Ihre sozialen Beziehungen, reflektieren Sie beispielsweise gemeinsam. Am Ende entwickeln Sie ein persönliches Gesundheitsprojekt, das über den Kurs hinauswirkt.
+
+Die allgemeine Stressbelastung kann auch als eine Art “Stresswaage” begriffen werden:
+
+Stellen Sie sich dabei eine Waage mit Waagschalen vor, wie Sie noch auf einigen Märkten zu finden sind. Stellen Sie sich nun vor, dass Sie für jede Belastung auf der einen und jede Entlastung auf der anderen Seite ein Gewicht auf die Waage legen. Die Größe und Schwere der einzelnen Gewichte sind dabei individuell sehr unterschiedlich. Würde Ihre Waage im Gleichgewicht sein?
+    </p>
+    <div class="reflektionsbox">
+      <strong>Reflektionsfragen:</strong>
+      <ul class="list-disc list-inside">
+        <li>Wie erkennst du deine eigenen Erholungsbedürfnisse?</li>
+        <li>In welchen Situationen empfindest du Freizeit als zusätzliche Pflicht?</li>
+        <li>Wie gelingt es dir, belastende Gedanken während der Freizeit loszulassen?</li>
+        <li>Was bedeutet für dich „Müßiggang“ und wie könntest du ihn wertschätzen?</li>
+        <li>Welche kleinen positiven Erlebnisse kannst du täglich bewusst wahrnehmen?</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+
+  <!-- Abschnitt 3 -->
+<section class="bg-white p-6 rounded-xl shadow mb-6" id="genuss">
+  <details class="mb-4 bg-genusstraining">
+    <summary class="text-lg font-semibold">3. Genuss mit allen Sinnen</summary>
+    <p class="mb-4 whitespace-pre-line">
+Es gibt zahlreiche und vielfältige Übungen, die sich zur täglichen Ausführung eignen. Dabei sind Ihrer Fantasie keine Grenzen gesetzt. Denken Sie sich einfach eine Übung für sich selbst aus! Ob das bewusste Essen eines Stückes Schokolade, der bewusste Genuss einer Tasse Kaffee oder das bewusste Riechen des Frühlingsduftes im Wald. Folgen Sie einfach der Regel:
+
+Eine Tätigkeit zur gleichen Zeit. Riechen Sie z.B. bewusst an Blumen, an Ihrem Morgenkaffee oder nehmen Sie den Duft des Meeres im Urlaub wahr. Sie können dabei alle Sinne trainieren (Tasten, Riechen, Schmecken, Hören, Sehen). Denken Sie sich einfach etwas aus und genießen Sie es Ihre Sinne zu schulen.
+    </p>
+    <div class="reflektionsbox">
+      <strong>Reflektionsfragen:</strong>
+      <ul class="list-disc list-inside">
+        <li>Welche Sinnesreize erlebst du besonders intensiv?</li>
+        <li>Welche deiner Sinne würdest du gerne bewusster trainieren?</li>
+        <li>Welche Tätigkeit könntest du täglich bewusst genießen?</li>
+        <li>Wie fühlt es sich an, wenn du etwas mit allen Sinnen wahrnimmst?</li>
+        <li>Gibt es Momente, in denen du komplett im Hier und Jetzt bist?</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+
+</body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function closeAllAccordions(except = null) {
+      document.querySelectorAll("details").forEach(d => {
+        if (d !== except) d.open = false;
+      });
+    }
+
+    function openAndScrollTo(hash) {
+      const target = document.querySelector(hash);
+      if (target && target.tagName.toLowerCase() === "section") {
+        const details = target.querySelector("details");
+        if (details) {
+          closeAllAccordions(details);
+          details.open = true;
+          const yOffset = -120; // Offset wegen fixer Navigation
+          const y = details.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+    }
+
+    if (window.location.hash) {
+      openAndScrollTo(window.location.hash);
+    }
+
+    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const hash = this.getAttribute("href");
+        history.pushState(null, null, hash);
+        openAndScrollTo(hash);
+      });
+    });
+  });
+</script>
+
+<a href="module3.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">← Zurück zu Modul 3</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const allDetails = document.querySelectorAll("details");
+
+    allDetails.forEach((detail) => {
+      detail.addEventListener("toggle", () => {
+        if (detail.open) {
+          allDetails.forEach((other) => {
+            if (other !== detail) {
+              other.open = false;
+            }
+          });
+        }
+      });
+    });
+  });
+</script>
+<!-- Abschlussabschnitt -->
+<section class="bg-green-100 border-l-4 border-green-600 text-green-800 p-6 rounded-xl shadow mb-12 mt-8">
+  <h2 class="text-2xl font-bold mb-2">🎉 Herzlichen Glückwunsch!</h2>
+  <p class="text-lg">
+    Du hast das Modul <strong>„Genusstraining“</strong> erfolgreich abgeschlossen.  
+    Nimm dir einen Moment Zeit, stolz auf dich zu sein – jede bewusste Übung zur Selbstfürsorge ist ein wertvoller Schritt hin zu mehr Wohlbefinden, Ausgeglichenheit und Lebensfreude.
+  </p>
+  <p class="mt-4">
+    Wenn du möchtest, kannst du dieses Modul jederzeit wiederholen oder anderen empfehlen.
+  </p>
+</section>
+
+
+</body>
+</html>
