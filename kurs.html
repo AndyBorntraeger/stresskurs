@@ -1,224 +1,398 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Einführung – Stressbewältigungstraining</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed p-6 max-w-3xl mx-auto">
-  <header class="mb-10">
-    <h1 class="text-4xl font-bold text-blue-800 mb-2">Stressbewältigungstraining</h1>
-    <p class="text-lg text-gray-600">Einführung und Überblick</p>
-  </header>
+  <title>Modul 1 – Entspannungstraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-<section class="bg-white p-6 rounded-xl shadow">
-  <h2 class="text-2xl font-semibold mb-4 text-blue-700">Einführung zum Anhören</h2>
-  <div>
-        <p class="mb-2 font-semibold">Einführung als gesprochene Version</p>
-        <audio controls class="w-full">
-          <source src="https://www.dropbox.com/scl/fi/50bmaspcsttvqjg1ligz0/einleitung.wav?rlkey=ui30kn74hgj73rv9o8yuyo701&st=nfi4jp3u&raw=1" type="audio/wav">
-          Dein Browser unterstützt dieses Audioformat nicht.
-        </audio>
-      </div>
+  <style>
+    details summary {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    details[open] > *:not(summary) {
+      background: rgba(255, 255, 255, 0.95);
+      color: #1a202c;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+
+   <!-- Hintergrund Kacheln -->
+<style>
+  .bg-einfuehrung { background: url('images/einfuehrung.jpg') center/cover no-repeat; }
+  .bg-roadmap { background: url('images/roadmap.jpg') center/cover no-repeat; }
+  .bg-men { background: url('images/men.jpg') center/cover no-repeat; }
+  .bg-reflektion { background: url('images/reflektion.jpg') center/cover no-repeat; }
+
+  details {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+  }
+
+  details summary {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  details > *:not(summary) {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+</style>
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+      <a class="text-blue-700 hover:underline whitespace-nowrap" href="#einfuehrung">Einführung</a>
+      <a class="text-blue-700 hover:underline whitespace-nowrap" href="#aufbau">Aufbau des Programms</a>
+      <a class="text-blue-700 hover:underline whitespace-nowrap" href="#vorgehen">Vorgehen</a>
+      <a class="text-blue-700 hover:underline whitespace-nowrap" href="#arbeitsblatt">Arbeitsblatt</a>
+    </div>
+  </nav>
+  <div class="h-16"></div>
+
+  <!-- Hauptüberschrift -->
+  <h1 class="text-3xl font-bold text-blue-700 mb-8">Das Stressbewältigungstraining</h1>
+
+<!-- Audio-Einführung -->
+<section class="mb-10">
+  <h2 class="text-xl font-semibold mb-2">Einführung zum Anhören</h2>
+  <audio class="w-full" controls>
+    <source src="https://www.dropbox.com/scl/fi/50bmaspcsttvqjg1ligz0/einleitung.wav?rlkey=ui30kn74hgj73rv9o8yuyo701&st=nfi4jp3u&raw=1" type="audio/wav" />
+    Dein Browser unterstützt kein Audioelement.
+  </audio>
+</section>
+
+<!-- Animierte Übersichtskacheln -->
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 mb-12">
+
+  <!-- Kachel 1: Einführung -->
+  <a href="#einfuehrung" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 4</span>
+    <img src="images/einfuehrung.jpg" alt="Einführung" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">1. Einführung</h3>
+      <p class="text-sm text-gray-600">Allgemeine Informationen zum Thema Entspannung.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 2: Aufbau -->
+  <a href="#aufbau" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 4</span>
+    <img src="images/roadmap.jpg" alt="Programmaufbau" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">2. Programmaufbau</h3>
+      <p class="text-sm text-gray-600">Wie das Programm aufgebaut ist und was dich erwartet.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 3: Vorgehen -->
+  <a href="#vorgehen" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 4</span>
+    <img src="images/men.jpg" alt="Vorgehen" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">3. Vorgehen</h3>
+      <p class="text-sm text-gray-600">So kannst du mit dem Modul sinnvoll arbeiten.</p>
+    </div>
+  </a>
+
+  <!-- Kachel 4: Arbeitsblatt -->
+  <a href="#arbeitsblatt" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 4 von 4</span>
+    <img src="images/reflektion.jpg" alt="Arbeitsblatt" class="w-full h-48 object-cover rounded-t-lg" />
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+      Jetzt starten
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold mb-1">4. Arbeitsblatt</h3>
+      <p class="text-sm text-gray-600">Deine Reflexion und Umsetzung für den Alltag.</p>
+    </div>
+  </a>
+
 </section>
 
 
-  <main class="space-y-6">
 
-    
 
-    <section class="bg-white p-6 rounded-xl shadow">
-      <p>
-        In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen dauerhaft hohen Belastungen ausgesetzt.
-        Umso wichtiger wird der bewusste Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.
-      </p>
-      <p class="mt-4">
-        Das vorliegende Trainingsprogramm zur Stressbewältigung unterstützt dabei, individuelle Stressmuster besser zu erkennen,
-        wirksame Bewältigungsstrategien zu entwickeln und persönliche Ressourcen gezielt zu stärken.
-        Es verbindet fundiertes psychologisches Wissen mit praxisorientierten Übungen und zielt darauf ab,
-        sowohl kurzfristige Entlastung als auch langfristige Veränderungen im Umgang mit Belastungen zu ermöglichen.
-      </p>
-    </section>
+  <!-- Einführung -->
+  <section id="einfuehrung" class="bg-white p-6 rounded-xl shadow mb-6">
+<details class="bg-einfuehrung">
+  <summary>1. Einführung</summary>
 
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Der Aufbau</h2>
-      <p>
-        Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können.
-        Das Training folgt einem logischen Aufbau, weshalb empfohlen wird, die Module nacheinander zu durchlaufen:
-      </p>
-      <ul class="list-disc list-inside mt-3 space-y-1 text-gray-700">
-        <li>Entspannungstraining</li>
-        <li>Mentaltraining</li>
-        <li>Problemlösetraining</li>
-        <li>Genusstraining</li>
-      </ul>
-    </section>
+  <div class="text-gray-700 text-base leading-snug space-y-2 mt-4">
+    <p>
+      In einer zunehmend schnelllebigen und anspruchsvollen Welt sind viele Menschen
+      dauerhaft hohen Belastungen ausgesetzt. Umso wichtiger wird der bewusste
+      Umgang mit Stress, um langfristig gesund, leistungsfähig und ausgeglichen zu bleiben.
+    </p>
 
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-semibold mb-2 text-blue-700">Das Vorgehen</h2>
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Selbstreflexion – Dein persönlicher Stressfragebogen</h2>
-      <p class="mb-3">
-        Bevor du in die Module einsteigst, lohnt sich ein kurzer Blick auf deinen aktuellen Umgang mit Stress.
-        Dieser wissenschaftlich fundierte Fragebogen hilft dir dabei, deine persönliche Belastungssituation besser einzuschätzen.
-      </p>
-      <ul class="list-disc list-inside space-y-1 text-gray-700 mb-3">
-        <li>Welche Stressoren wirken aktuell auf dich ein?</li>
-        <li>Wie stark fühlst du dich belastet?</li>
-        <li>Welche Bewältigungsstrategien nutzt du bisher?</li>
-      </ul>
-      <p class="mb-4">
-        Die Auswertung erfolgt direkt online – anonym, unkompliziert und ohne Registrierung.
-        Nutze diese Gelegenheit zur Selbstreflexion und starte bewusster in dein Training.
-      </p>
-      <a href="https://andyborntraeger.github.io/Stressfragebogen/" target="_blank"
-         class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-        ➔ Jetzt Stressfragebogen ausfüllen
-      </a>
-    </section>
+    <p>
+      Das vorliegende Trainingsprogramm zur Stressbewältigung unterstützt dabei,
+      individuelle Stressmuster besser zu erkennen, wirksame Bewältigungsstrategien
+      zu entwickeln und persönliche Ressourcen gezielt zu stärken.
+    </p>
 
-      <p>
-        Zunächst einmal: Stressen Sie sich nicht! Beginnen Sie mit dem ersten Modul und arbeiten sich stetig, Schritt-für-Schritt, vor.
-        Die Praxis zeigt: die Ungeduld und der Wunsch nach Besserung führt (nachvollziehbar) dazu, dass die Motivation am Anfang
-        überschwänglich und im Prozess stetig nachlässt.
-      </p>
-      <p class="mt-4">
-        Konzentrieren Sie sich besser auf eine längere Wegstrecke – der viel zitierte Marathon – nicht auf einen kurzen explosiven Sprint.
-        Langfristige Veränderungen im Stresserleben werden nicht von heute auf morgen erreicht, sondern erfordern eine stetige Übung der Methoden.
-      </p>
-      <p class="mt-4">
-        Auch für uns als Experten gehört ein stetiges Üben in den Alltag.
-        Damit dies gelingt, empfehle ich einen festen Termin pro Woche für dieses Programm.
-        Planen Sie Uhrzeit, Tag und Inhalt Ihrer „Arbeitssitzung“ (z. B. Montag, 03.02.25, 16:00 Uhr, Durcharbeiten Modul 1).
-        Planen Sie auch die Übungseinheiten strategisch ein – am besten direkt an bestehende Routinen andocken (z. B. 10 Minuten Entspannungstraining nach dem Zähneputzen).
-      </p>
-      <p class="mt-4 font-semibold text-green-700">
-        Wenn Sie so vorgehen, sichern Sie sich stetige und langfristige Erfolge!
-        Viel Erfolg und Spaß beim Erlernen hilfreicher Methoden zur Stressbewältigung.
-      </p>
-    </section>
+    <p>
+      Es verbindet fundiertes psychologisches Wissen mit praxisorientierten Übungen
+      und zielt darauf ab, sowohl kurzfristige Entlastung als auch langfristige
+      Veränderungen im Umgang mit Belastungen zu ermöglichen.
+    </p>
+  </div>
 
-    
+  <!-- Merkkasten -->
+  <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+    <p class="font-semibold mb-1">Das Wichtigste auf einen Blick:</p>
+    <ul class="list-disc list-inside space-y-0.5">
+      <li>Stressbewältigung ist zentral für Gesundheit und Wohlbefinden</li>
+      <li>Individuelle Muster erkennen und verstehen</li>
+      <li>Bewältigungsstrategien und Ressourcen stärken</li>
+      <li>Kurzfristige Entlastung & langfristige Veränderung</li>
+    </ul>
+  </div>
+</details>
 
-      
-    </section>
+  </section>
 
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Arbeitsblatt herunterladen</h2>
-      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Arbeitsblatt – Vorschau</h2>
-<iframe 
-  src="https://www.dropbox.com/scl/fi/2urspmt7lu4fqxgeqbrcb/arbeitsblatt_mein_ziel.pdf?rlkey=bb6p4l3qfouzfyq8c55b8w6z5&st=31imr7kp&raw=1" 
-  width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 8px;">
-</iframe>
-<p class="mt-2">
-  <a href="https://www.dropbox.com/scl/fi/2urspmt7lu4fqxgeqbrcb/arbeitsblatt_mein_ziel.pdf?rlkey=bb6p4l3qfouzfyq8c55b8w6z5&st=31imr7kp&raw=1" 
-     download 
-     class="text-blue-600 underline hover:text-blue-800 transition">
-    → Arbeitsblatt herunterladen (PDF)
-  </a>
-</p>
-    </section>
-  
-    <section class="bg-white p-6 rounded-xl shadow">
-      <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Weitere Audioübungen zur Einstimmung</h2>
+  <!-- Aufbau des Programms -->
+  <section id="aufbau" class="bg-white p-6 rounded-xl shadow mb-6">
 
-      
+<details class="mb-4 bg-roadmap">
+  <summary>2. Der Aufbau des Programms</summary>
 
-      <div class="mb-6">
-        <p class="mb-2 font-semibold">1. Frühling mit Musik</p>
-        <audio controls class="w-full">
-          <source src="https://www.dropbox.com/scl/fi/0hpcc0nqfxkhc6lt28sic/fruehling.mp3?rlkey=iijrip3e4m35a29127fl9egy8&st=597xvmtw&raw=1" type="audio/mpeg">
-          Dein Browser unterstützt dieses Audioformat nicht.
-        </audio>
+  <div class="text-gray-700 text-base leading-snug mt-4 space-y-3">
+    <p>
+      Das Trainingsmodul ist in vier unterschiedliche Bausteine unterteilt, die nacheinander im Selbststudium durchlaufen werden können. 
+      Das Training folgt einem logischen Aufbau, weshalb empfohlen wird, die Module in der vorgesehenen Reihenfolge zu bearbeiten:
+    </p>
+
+    <ul class="list-disc list-inside ml-4 space-y-1">
+      <li><strong>Entspannungstraining</strong></li>
+      <li><strong>Mentaltraining</strong></li>
+      <li><strong>Problemlösetraining</strong></li>
+      <li><strong>Genusstraining</strong></li>
+    </ul>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Vorgehen -->
+<section id="vorgehen" class="bg-white p-6 rounded-xl shadow mb-6">
+  <details class="mb-4 bg-men">
+    <summary>3. Das Vorgehen</summary>
+
+    <div class="mt-4 space-y-6 text-gray-700 text-base leading-relaxed">
+
+      <!-- Stressfragebogen -->
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Selbstreflexion – Dein persönlicher Stressfragebogen</h3>
+        <p>
+          Bevor du in die Module einsteigst, lohnt sich ein kurzer Blick auf deinen aktuellen Umgang mit Stress.
+          Dieser wissenschaftlich fundierte Fragebogen hilft dir dabei, deine persönliche Belastungssituation besser einzuschätzen.
+        </p>
+        <ul class="list-disc list-inside space-y-1 mt-2">
+          <li>Welche Stressoren wirken aktuell auf dich ein?</li>
+          <li>Wie stark fühlst du dich belastet?</li>
+          <li>Welche Bewältigungsstrategien nutzt du bisher?</li>
+        </ul>
+        <p class="mt-2">
+          Die Auswertung erfolgt direkt online – anonym, unkompliziert und ohne Registrierung.
+          Nutze diese Gelegenheit zur Selbstreflexion und starte bewusster in dein Training.
+        </p>
+        <a href="https://andyborntraeger.github.io/Stressfragebogen/" target="_blank"
+           class="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+          ➔ Jetzt Stressfragebogen ausfüllen
+        </a>
       </div>
 
-      
-    </section>
-<h2 class="text-2xl font-semibold mb-4 text-blue-700">Fortschritt</h2>
-      <label class="flex items-center space-x-3">
-        <input type="checkbox" id="index_check" class="h-5 w-5 text-green-500 border-gray-300 rounded" />
-        <span>Ich habe die Einführung vollständig gelesen und verstanden.</span>
-      </label>
-      <p id="index_motivation" class="mt-3 text-green-700 font-semibold hidden">
-        🎉 Super gemacht! Du hast den ersten Schritt gemeistert. Weiter so!
+      <!-- Haupttext -->
+      <p>
+        Zunächst einmal: Stress dich nicht! Beginne mit dem ersten Modul und arbeite dich Schritt für Schritt vor.
+        Die Praxis zeigt: Die Ungeduld und der Wunsch nach schneller Besserung führen häufig dazu, dass die Motivation am Anfang übersprudelt – und später nachlässt.
       </p>
-    </section>
+
+      <p>
+        Konzentriere dich stattdessen auf eine längere Wegstrecke – den viel zitierten Marathon – nicht auf einen explosiven Sprint.
+        Langfristige Veränderungen im Stresserleben werden nicht über Nacht erreicht, sondern durch regelmäßige Übung.
+      </p>
+
+      <p>
+        Auch für uns als Experten gehört kontinuierliches Üben zum Alltag. Damit dir das gelingt, empfehle ich einen festen Termin pro Woche für dieses Programm.
+        Plane dir Uhrzeit, Tag und Inhalt deiner „Arbeitssitzung“ ein (z. B. Montag, 03.02.25, 16:00 Uhr, Durcharbeiten Modul 1).
+        Auch die Übungseinheiten solltest du strategisch an bestehende Routinen ankoppeln (z. B. 10 Minuten Entspannungstraining nach dem Zähneputzen).
+      </p>
+
+      <p class="font-semibold text-green-700">
+        Wenn du so vorgehst, sicherst du dir stetige und nachhaltige Erfolge.
+        Viel Freude und Erfolg beim Erlernen hilfreicher Methoden zur Stressbewältigung!
+      </p>
+
+      <!-- Das Wichtigste auf einen Blick -->
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900">
+        <p class="font-semibold mb-1">Das Wichtigste auf einen Blick:</p>
+        <ul class="list-disc list-inside space-y-0.5">
+          <li>Starte mit dem Stressfragebogen zur Selbstreflexion</li>
+          <li>Gehe die Module in Reihenfolge und mit Ruhe an</li>
+          <li>Übe regelmäßig – lieber Marathon als Sprint</li>
+          <li>Plane feste Termine und verknüpfe Übungen mit Alltag</li>
+        </ul>
+      </div>
+
+    </div>
+  </details>
+</section>
 
 
-    <section id="modul1_link_section" class="bg-white p-6 rounded-xl shadow hidden">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Modul 1 freigeschaltet</h2>
-      <p class="mb-2">Du kannst nun mit dem ersten Modul beginnen:</p>
-      <a href="module1/module1.html" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-        ➔ Modul 1: Entspannungstraining starten
-      </a>
-    </section>
+
+  <!-- Arbeitsblatt -->
+ <section id="arbeitsblatt" class="bg-white p-6 rounded-xl shadow mb-6">
+  <details class="mb-4 bg-reflektion">
+    <summary>4. Arbeitsblatt zur Stressbewältigung</summary>
+
+    <div class="mt-4 space-y-6 text-gray-700 text-base leading-relaxed">
+
+      <!-- Einleitung -->
+      <p>
+        Dieses Arbeitsblatt unterstützt dich dabei, deine persönlichen Ziele zur Stressbewältigung zu reflektieren
+        und schriftlich festzuhalten. Es hilft dir, bewusste Entscheidungen zu treffen und deine Entwicklung gezielt zu steuern.
+      </p>
+
+      <!-- PDF-Viewer -->
+      <iframe
+        class="w-full h-64 border rounded"
+        src="https://www.dropbox.com/scl/fi/2urspmt7lu4fqxgeqbrcb/arbeitsblatt_mein_ziel.pdf?rlkey=bb6p4l3qfouzfyq8c55b8w6z5&st=31imr7kp&raw=1"
+        title="Arbeitsblatt: Mein Ziel"
+      ></iframe>
+
+      <!-- Download-Link -->
+      <div class="mt-4 text-right">
+        <a
+          href="https://www.dropbox.com/scl/fi/2urspmt7lu4fqxgeqbrcb/arbeitsblatt_mein_ziel.pdf?rlkey=bb6p4l3qfouzfyq8c55b8w6z5&st=31imr7kp&raw=1"
+          download
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300"
+        >
+          Arbeitsblatt herunterladen
+        </a>
+      </div>
+
+      <!-- Merkkasten -->
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900">
+        <p class="font-semibold mb-1">Das Wichtigste auf einen Blick:</p>
+        <ul class="list-disc list-inside space-y-0.5">
+          <li>Arbeitsblatt hilft dir bei der Zielklärung</li>
+          <li>Du formulierst dein persönliches Stressziel</li>
+          <li>Ideal als Abschluss oder Ergänzung zum Modul</li>
+          <li>Downloadbar & direkt im Browser ausfüllbar</li>
+        </ul>
+      </div>
+
+    </div>
+  </details>
+</section>
 
 
-</main>
+ <!-- Abschlussbox: Einstieg in das Training -->
+<section class="bg-green-50 border-l-4 border-green-400 p-6 rounded-xl shadow mb-12">
+  <h2 class="text-xl font-semibold text-green-700 mb-2">Bereit für deinen Weg?</h2>
+  <p class="text-gray-700 mb-4">
+    Du hast jetzt alle Grundlagen erhalten, um dein Training zur Stressbewältigung zu starten.
+    Nimm dir Zeit, wähle einen ruhigen Moment – und beginne mit dem ersten Modul.
+  </p>
+  <div class="text-right">
+    <a href="module1.html"
+       class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300">
+      ➔ Jetzt mit den Trainingsmodulen beginnen
+    </a>
+  </div>
+</section>
+
+
+<!-- Boxen klappen auf und wieder zu + Navigation steuert an und klappt auf -->
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const checkbox = document.getElementById("index_check");
-    const message = document.getElementById("index_motivation");
-
-    // Zustand laden
-    const checked = localStorage.getItem("index_done") === "true";
-    checkbox.checked = checked;
-    if (checked) message.classList.remove("hidden");
-
-    checkbox.addEventListener("change", () => {
-        localStorage.setItem("index_done", checkbox.checked);
-        if (checkbox.checked) {
-            message.classList.remove("hidden");
-        } else {
-            message.classList.add("hidden");
-        }
-    });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const checkbox = document.getElementById("index_check");
-    const message = document.getElementById("index_motivation");
-
-    // Zustand laden
-    const checked = localStorage.getItem("index_done") === "true";
-    checkbox.checked = checked;
-    if (checked) message.classList.remove("hidden");
-
-    checkbox.addEventListener("change", () => {
-        localStorage.setItem("index_done", checkbox.checked);
-        if (checkbox.checked) {
-            message.classList.remove("hidden");
-        } else {
-            message.classList.add("hidden");
-        }
-    
-        const linkSection = document.getElementById("modul1_link_section");
-        if (checkbox.checked) {
-            linkSection.classList.remove("hidden");
-        } else {
-            linkSection.classList.add("hidden");
-        }
-    });
-    if (checkbox.checked) {
-        document.getElementById("modul1_link_section").classList.remove("hidden");
+  document.addEventListener("DOMContentLoaded", () => {
+    function closeAllAccordions(except = null) {
+      document.querySelectorAll("details").forEach(d => {
+        if (d !== except) d.open = false;
+      });
     }
 
+    function openAndScrollTo(hash) {
+      const targetSection = document.querySelector(hash);
+      if (!targetSection) return;
 
-        const linkSection = document.getElementById("modul1_link_section");
-        if (checkbox.checked) {
-            linkSection.classList.remove("hidden");
-        } else {
-            linkSection.classList.add("hidden");
-        }
-    });
-    if (checkbox.checked) {
-        document.getElementById("modul1_link_section").classList.remove("hidden");
+      const details = targetSection.querySelector("details");
+      if (details) {
+        closeAllAccordions(details);
+        details.open = true;
+        const yOffset = -100;
+        const y = details.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      } else {
+        // Kein <details>: einfach scrollen
+        const yOffset = -100;
+        const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
 
+    // Initial beim Laden
+    if (window.location.hash) {
+      openAndScrollTo(window.location.hash);
+    }
+
+    // Klick auf Navigation
+    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const hash = this.getAttribute("href");
+        history.pushState(null, null, hash);
+        openAndScrollTo(hash);
+      });
+    });
+
+    // Manuelles Öffnen von <details>
+    document.querySelectorAll("details summary").forEach(summary => {
+      summary.addEventListener("click", function (e) {
+        const clickedDetails = this.parentElement;
+        const isAlreadyOpen = clickedDetails.open;
+        e.preventDefault();
+        closeAllAccordions();
+        if (!isAlreadyOpen) clickedDetails.open = true;
+      });
+    });
+  });
 </script>
+
 </body>
 </html>
